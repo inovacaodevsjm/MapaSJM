@@ -1,0 +1,24 @@
+Bairros - São João de Meriti:
+População, Domicílios, Domicílios Ocupados
+
+Educação:
+nome, Quantidade de Alunos, Endereço, bairro, GPS, horario de funcionamento e tipo (Escola ou Creche)
+
+Saúde:
+Nome, Endereço, Bairro, GPS e Tipo (Centro de Saúde / Centro de atendimento psicossocial
+/ Pronto atendimento / Residência terapêutica / Policlinica / Hospital Maternidade)
+
+Assistencia Social:
+nome, endereço, horario de funcionamento e GPS
+
+SETRAB:
+nome, endereço, horario de atendimento e GPS
+
+Cultura:
+nome, endereço, horario de funcionamento e GPS
+
+Esportes e Lazer:
+nome, endereço, horario de funcionamento e GPS
+
+Praças:
+Nome, endereço e GPS

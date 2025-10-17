@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa SJM - Segmentação por Bairro</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Mapa -->
+  <div id="map"></div>
+
+  <!-- Adicionando barra de pesquisa no canto superior direito -->
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar instituição..." autocomplete="off" inputmode="text">
+    <div id="searchSuggestions" class="search-suggestions hidden"></div>
+  </div>
+
+  <!-- Adicionando botão de fullscreen no canto inferior esquerdo -->
+  <div class="fullscreen-control">
+    <button id="fullscreenBtn" class="fullscreen-btn" title="Tela cheia">⛶</button>
+  </div>
+
+  <!-- Adicionando controles de zoom customizados no canto inferior direito -->
+  <div class="custom-zoom-controls">
+    <button id="zoomIn" class="zoom-btn">+</button>
+    <button id="zoomOut" class="zoom-btn">−</button>
+  </div>
+
+  <!-- Novo menu lateral estilizado como Google Maps -->
+  <div id="menu" class="menu-lateral">
+    <!-- Cabeçalho do menu -->
+    <div class="menu-header">
+      <button id="menuToggle" class="menu-toggle">☰</button>
+      <div class="menu-title">
+        <h1>Análise Geoespacial SJM</h1>
+        <p>Planejamento e Inovação</p>
+      </div>
+    </div>
+
+    <!-- Informações do mapa -->
+    <div class="menu-info">
+      <p class="info-views">Análise Descritiva do Mapa</p>
+      <div class="menu-actions">
+        <a class="action-btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDlhZWQ0MDItNjQ0MC00NjA4LTkwZGMtNDBlMDQwNTZlYTVmIiwidCI6IjE0MmE5MmM3LWMxNjctNGY1Ny05MDg3LTM3ZWVlMGQ0MjA2YyJ9" target="_blank" rel="noopener noreferrer">ABRIR RELATÓRIO</a>
+      </div>
+    </div>
+
+    <!-- Conteúdo do menu -->
+    <div class="menu-content">
+
+      <!-- Seção Bairros -->
+      <div class="menu-section">
+        <div class="section-header" data-section="bairros">
+          <input type="checkbox" id="toggleBairros" class="section-checkbox" checked>
+          <span class="section-icon">▼</span>
+          <span class="section-title">Bairros</span>
+        </div>
+        <div id="bairrosContainer" class="section-content">
+          <!-- Checkboxes serão preenchidos dinamicamente -->
+        </div>
+      </div>
+
+      <!-- Seção Densidade Demográfica -->
+      <div class="menu-section">
+        <div class="section-header" data-section="densidade">
+          <input type="checkbox" id="toggleDensidade" class="section-checkbox">
+          <span class="section-icon">▼</span>
+          <span class="section-title">Densidade Demográfica</span>
+        </div>
+        <div id="densidadeContainer" class="section-content">
+          <div id="densidadeLegend" class="density-legend hidden">
+            <div class="legend-title">Densidade (hab/km²)</div>
+            <div class="legend-items"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção Educação -->
+      <div class="menu-section">
+        <div class="section-header" data-section="educacao">
+          <input type="checkbox" id="toggleEducacao" class="section-checkbox">
+          <span class="section-icon">▼</span>
+          <span class="section-title">Educação</span>
+        </div>
+        <div id="educacaoContainer" class="section-content">
+          <label class="layer-item">
+            <input type="checkbox" id="toggleCreches" class="layer-checkbox">
+            <span class="layer-icon" style="background-color: #d43c3c;"></span>
+            <span class="layer-name">Creches</span>
+          </label>
+          <label class="layer-item">
+            <input type="checkbox" id="toggleEscolas" class="layer-checkbox">
+            <span class="layer-icon" style="background-color: #4ecdc4;"></span>
+            <span class="layer-name">Escolas</span>
+          </label>
+          <label class="layer-item">
+            <input type="checkbox" id="toggleNovasConstrucoes" class="layer-checkbox">
+            <span class="layer-icon" style="background-color: #ffa500;"></span>
+            <span class="layer-name">Novas Construções</span>
+          </label>
+          
+          <!-- Adicionando botão de filtros -->
+          <div class="filter-section">
+            <button id="toggleFilters" class="filter-toggle-btn">
+              🔍 Filtrar Instituições
+            </button>
+            <div id="filtersContainer" class="filters-container hidden">
+              <div class="filter-group">
+                <label class="filter-label">Filtrar por Bairro:</label>
+                <select id="filterBairro" class="filter-select">
+                  <option value="">Todos os Bairros</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label class="filter-label">Filtrar por Polo:</label>
+                <select id="filterPolo" class="filter-select">
+                  <option value="">Todos os Polos</option>
+                </select>
+              </div>
+              <!-- Adicionando filtro por quantidade mínima de alunos -->
+              <div class="filter-group">
+                <label class="filter-label">Quantidade Mínima de Alunos:</label>
+                <input type="number" id="filterAlunos" class="filter-input" placeholder="Ex: 100" min="0">
+              </div>
+              <button id="clearFilters" class="clear-filters-btn">Limpar Filtros</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Adicionando card de preview de imagem no canto inferior direito -->
+  <div id="imagePreview" class="image-preview-card hidden">
+    <button id="closeImagePreview" class="close-preview-btn">✕</button>
+    <img id="previewImage" src="/placeholder.svg" alt="Imagem da instituição">
+    <div id="previewTitle" class="preview-title"></div>
+  </div>
+
+  <!-- Adding error popup modal for addresses outside São João de Meriti -->
+  <div id="errorPopup" class="error-popup-overlay hidden">
+    <div class="error-popup-container">
+      <button id="closeErrorPopup" class="error-popup-close">✕</button>
+      <img src="../Include/Img/popup-erro.png" alt="Erro" class="error-popup-image">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

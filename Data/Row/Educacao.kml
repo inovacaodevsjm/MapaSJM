@@ -1,0 +1,2425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Educação</name>
+    <Style id="icon-1742-FFD600-labelson">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>CAEE - Centro de Atendimento Educacional Especializado</name>
+      <description><![CDATA[descrição: Tipo: Educação Especial<br>Alunos: <br>Endereço: Rua Elisário de Souza, 600<br>Bairro: Vila Norma<br>GPS: -22.78875620489328, -43.405836748291044<br>Tipo: Educação Especial<br>Alunos: <br>Endereço: Rua Elisário de Souza, 600<br>Bairro: Vila Norma<br>GPS: -22.78875620489328, -43.405836748291044]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Educação Especial
+Alunos: 
+Endereço: Rua Elisário de Souza, 600
+Bairro: Vila Norma
+GPS: -22.78875620489328, -43.405836748291044</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Educação Especial</value>
+        </Data>
+        <Data name="Alunos">
+          <value/>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Elisário de Souza, 600</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Norma</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78875620489328, -43.405836748291044</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.405837,-22.788756,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CIEP 132 São João Bosco</name>
+      <description><![CDATA[descrição: Tipo: Infantil / Fundamental<br>Alunos: 889<br>Endereço: Rua Torres Homem. s/n°<br>Bairro: Éden<br>GPS: -22.791066547301476, -43.40061190226758<br>Tipo: Infantil / Fundamental<br>Alunos: 889.0<br>Endereço: Rua Torres Homem. s/n°<br>Bairro: Éden<br>GPS: -22.791066547301476, -43.40061190226758]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Infantil / Fundamental
+Alunos: 889
+Endereço: Rua Torres Homem. s/n°
+Bairro: Éden
+GPS: -22.791066547301476, -43.40061190226758</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Infantil / Fundamental</value>
+        </Data>
+        <Data name="Alunos">
+          <value>889.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Torres Homem. s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Éden</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.791066547301476, -43.40061190226758</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.400612,-22.791067,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CIEP 138 Dauta Jobert Barreto</name>
+      <description><![CDATA[descrição: Tipo: Infantil / Fundamental 1 e 2 /  Integral<br>Alunos: 583<br>Endereço: Rua Joaquim Coelho Alamo, s/n°<br>Bairro: Vila Tiradentes<br>GPS: -22.78915950565353, -43.38705011576157<br>Tipo: Infantil / Fundamental 1 e 2 /  Integral<br>Alunos: 583.0<br>Endereço: Rua Joaquim Coelho Alamo, s/n°<br>Bairro: Vila Tiradentes<br>GPS: -22.78915950565353, -43.38705011576157]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Infantil / Fundamental 1 e 2 /  Integral
+Alunos: 583
+Endereço: Rua Joaquim Coelho Alamo, s/n°
+Bairro: Vila Tiradentes
+GPS: -22.78915950565353, -43.38705011576157</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Infantil / Fundamental 1 e 2 /  Integral</value>
+        </Data>
+        <Data name="Alunos">
+          <value>583.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Joaquim Coelho Alamo, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Tiradentes</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78915950565353, -43.38705011576157</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.38705,-22.78916,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CIEP 180 Pres. João Goulart</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 688<br>Endereço: Rua Três s/n°, Pq. Juriti<br>Bairro: Parque Araruama<br>GPS: -22.801213551699096, -43.344990231102415<br>Tipo: <br>Alunos: 688.0<br>Endereço: Rua Três s/n°, Pq. Juriti<br>Bairro: Parque Araruama<br>GPS: -22.801213551699096, -43.344990231102415]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 688
+Endereço: Rua Três s/n°, Pq. Juriti
+Bairro: Parque Araruama
+GPS: -22.801213551699096, -43.344990231102415</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>688.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Três s/n°, Pq. Juriti</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Araruama</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.801213551699096, -43.344990231102415</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.34499,-22.801214,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CIEP 378 Thereza Peixoto Gonçalves</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 242<br>Endereço: Rua Piauí s/n°<br>Bairro: Centro<br>GPS: -22.79813107575488, -43.36261928877315<br>Tipo: <br>Alunos: 242.0<br>Endereço: Rua Piauí s/n°<br>Bairro: Centro<br>GPS: -22.79813107575488, -43.36261928877315]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 242
+Endereço: Rua Piauí s/n°
+Bairro: Centro
+GPS: -22.79813107575488, -43.36261928877315</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>242.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Piauí s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.79813107575488, -43.36261928877315</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.362619,-22.798131,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Complexo Vila São João</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 763<br>Endereço: Av. Alberto de Oliveira, S/N<br>Bairro: Vila São João<br>GPS: -22.76799706399434, -43.35359615780924<br>Tipo: <br>Alunos: 763.0<br>Endereço: Av. Alberto de Oliveira, S/N<br>Bairro: Vila São João<br>GPS: -22.76799706399434, -43.35359615780924]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 763
+Endereço: Av. Alberto de Oliveira, S/N
+Bairro: Vila São João
+GPS: -22.76799706399434, -43.35359615780924</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>763.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Alberto de Oliveira, S/N</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São João</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.76799706399434, -43.35359615780924</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.353596,-22.767997,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche CEDIAS</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 268<br>Endereço: Rua Ibicuí, s/n°<br>Bairro: Parque Tietê<br>GPS: -22.78721830773495, -43.33417037343221<br>Tipo: Creche<br>Alunos: 268.0<br>Endereço: Rua Ibicuí, s/n°<br>Bairro: Parque Tietê<br>GPS: -22.78721830773495, -43.33417037343221]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 268
+Endereço: Rua Ibicuí, s/n°
+Bairro: Parque Tietê
+GPS: -22.78721830773495, -43.33417037343221</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>268.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Ibicuí, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Tietê</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78721830773495, -43.33417037343221</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.33417,-22.787218,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Criança Feliz</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 182<br>Endereço: Rua Fernandes Queiroz c/ Rua Porto Alegre, s/n°<br>Bairro: Jardim Metrópole<br>GPS: -22.761673500954085, -43.34132213340145<br>Tipo: Creche<br>Alunos: 182.0<br>Endereço: Rua Fernandes Queiroz c/ Rua Porto Alegre, s/n°<br>Bairro: Jardim Metrópole<br>GPS: -22.761673500954085, -43.34132213340145]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 182
+Endereço: Rua Fernandes Queiroz c/ Rua Porto Alegre, s/n°
+Bairro: Jardim Metrópole
+GPS: -22.761673500954085, -43.34132213340145</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>182.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Fernandes Queiroz c/ Rua Porto Alegre, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Metrópole</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.761673500954085, -43.34132213340145</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.341322,-22.761674,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRECHE DA VILA SÃO JOÃO</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 172<br>Endereço: Av. Alberto de Oliveira, S/N<br>Bairro: Vila São João<br>GPS: -22.767393613836564, -43.35362258903273<br>Tipo: Creche<br>Alunos: 172.0<br>Endereço: Av. Alberto de Oliveira, S/N<br>Bairro: Vila São João<br>GPS: -22.767393613836564, -43.35362258903273]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 172
+Endereço: Av. Alberto de Oliveira, S/N
+Bairro: Vila São João
+GPS: -22.767393613836564, -43.35362258903273</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>172.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Alberto de Oliveira, S/N</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São João</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.767393613836564, -43.35362258903273</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.353623,-22.767394,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Emani do Amaral Peixoto</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 132<br>Endereço: Rua Paulo de Frontin, 878<br>Bairro: Vila Jurandir<br>GPS: -22.787739077146988, -43.400768702267605<br>Tipo: Creche<br>Alunos: 132.0<br>Endereço: Rua Paulo de Frontin, 878<br>Bairro: Vila Jurandir<br>GPS: -22.787739077146988, -43.400768702267605]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 132
+Endereço: Rua Paulo de Frontin, 878
+Bairro: Vila Jurandir
+GPS: -22.787739077146988, -43.400768702267605</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>132.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Paulo de Frontin, 878</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Jurandir</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.787739077146988, -43.400768702267605</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.400769,-22.787739,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Favo de Mel</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 327<br>Endereço: Av. Dr. Arruda Negreiros, s/n° esquina c/ Rua Sumidouro Lt 5 a 8<br>Bairro: Coelho da Rocha<br>GPS: -22.77304866774776, -43.39096441945607<br>Tipo: Creche<br>Alunos: 327.0<br>Endereço: Av. Dr. Arruda Negreiros, s/n° esquina c/ Rua Sumidouro Lt 5 a 8<br>Bairro: Coelho da Rocha<br>GPS: -22.77304866774776, -43.39096441945607]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 327
+Endereço: Av. Dr. Arruda Negreiros, s/n° esquina c/ Rua Sumidouro Lt 5 a 8
+Bairro: Coelho da Rocha
+GPS: -22.77304866774776, -43.39096441945607</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>327.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Dr. Arruda Negreiros, s/n° esquina c/ Rua Sumidouro Lt 5 a 8</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Coelho da Rocha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77304866774776, -43.39096441945607</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.390964,-22.773049,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Lindaura Amorim</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 357<br>Endereço: Rua Pastor Joaquim Rosa, 499<br>Bairro: Jardim Meriti<br>GPS: -22.77910804679399, -43.369341659938485<br>Tipo: Creche<br>Alunos: 357.0<br>Endereço: Rua Pastor Joaquim Rosa, 499<br>Bairro: Jardim Meriti<br>GPS: -22.77910804679399, -43.369341659938485]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 357
+Endereço: Rua Pastor Joaquim Rosa, 499
+Bairro: Jardim Meriti
+GPS: -22.77910804679399, -43.369341659938485</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>357.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Pastor Joaquim Rosa, 499</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77910804679399, -43.369341659938485</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.369342,-22.779108,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Maria Alves Lavouras</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 112<br>Endereço: Rua Olaria, s/n°<br>Bairro: Centro<br>GPS: -22.806316318091618, -43.37228042925516<br>Tipo: Creche<br>Alunos: 112.0<br>Endereço: Rua Olaria, s/n°<br>Bairro: Centro<br>GPS: -22.806316318091618, -43.37228042925516]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 112
+Endereço: Rua Olaria, s/n°
+Bairro: Centro
+GPS: -22.806316318091618, -43.37228042925516</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>112.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Olaria, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.806316318091618, -43.37228042925516</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.37228,-22.806316,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Maria Ferreira Filgueiras</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 195<br>Endereço: Rua Aragui c/ Rua Visconde de Niterói, s/n°<br>Bairro: Jardim Metrópole<br>GPS: -22.768547652377197, -43.33342116178568<br>Tipo: Creche<br>Alunos: 195.0<br>Endereço: Rua Aragui c/ Rua Visconde de Niterói, s/n°<br>Bairro: Jardim Metrópole<br>GPS: -22.768547652377197, -43.33342116178568]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 195
+Endereço: Rua Aragui c/ Rua Visconde de Niterói, s/n°
+Bairro: Jardim Metrópole
+GPS: -22.768547652377197, -43.33342116178568</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>195.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Aragui c/ Rua Visconde de Niterói, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Metrópole</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.768547652377197, -43.33342116178568</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.333421,-22.768548,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Prof. Antenor Lopes Martins</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 179<br>Endereço: Rua Maria Gama S/N<br>Bairro: Tomazinho<br>GPS: -22.801055699357356, -43.40044115809072<br>Tipo: Creche<br>Alunos: 179.0<br>Endereço: Rua Maria Gama S/N<br>Bairro: Tomazinho<br>GPS: -22.801055699357356, -43.40044115809072]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 179
+Endereço: Rua Maria Gama S/N
+Bairro: Tomazinho
+GPS: -22.801055699357356, -43.40044115809072</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>179.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Maria Gama S/N</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Tomazinho</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.801055699357356, -43.40044115809072</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.400441,-22.801056,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Renascer</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 114<br>Endereço: Avenida Sarapuí, s/n° esquina Avenida Pasteur<br>Bairro: Parque Alian<br>GPS: -22.765751, -43.3776272<br>Tipo: Creche<br>Alunos: 114.0<br>Endereço: Avenida Sarapuí, s/n° esquina Avenida Pasteur<br>Bairro: Parque Alian<br>GPS: -22.765751, -43.3776272]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 114
+Endereço: Avenida Sarapuí, s/n° esquina Avenida Pasteur
+Bairro: Parque Alian
+GPS: -22.765751, -43.3776272</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>114.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Sarapuí, s/n° esquina Avenida Pasteur</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Alian</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.765751, -43.3776272</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.377627,-22.765751,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Rosa de Oliveira Muiller</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 321<br>Endereço: Rua Montevidéu, nº 91<br>Bairro: Vilar dos Teles<br>GPS: -22.765724218438063, -43.3713366809448<br>Tipo: Creche<br>Alunos: 321.0<br>Endereço: Rua Montevidéu, nº 91<br>Bairro: Vilar dos Teles<br>GPS: -22.765724218438063, -43.3713366809448]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 321
+Endereço: Rua Montevidéu, nº 91
+Bairro: Vilar dos Teles
+GPS: -22.765724218438063, -43.3713366809448</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>321.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Montevidéu, nº 91</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.765724218438063, -43.3713366809448</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.371337,-22.765724,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Santa Clara</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 134<br>Endereço: Estrada São João Caxias 122<br>Bairro: Centro<br>GPS: -22.801218268240614, -43.354055997217806<br>Tipo: Creche<br>Alunos: 134.0<br>Endereço: Estrada São João Caxias 122<br>Bairro: Centro<br>GPS: -22.801218268240614, -43.354055997217806]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 134
+Endereço: Estrada São João Caxias 122
+Bairro: Centro
+GPS: -22.801218268240614, -43.354055997217806</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>134.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Estrada São João Caxias 122</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.801218268240614, -43.354055997217806</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.354056,-22.801218,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRECHE VALDER VERMELHO</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 335<br>Endereço: Rua Ana Brito da Silva, nº 300<br>Bairro: São Mateus<br>GPS: -22.8057705378236, -43.38626787343182<br>Tipo: Creche<br>Alunos: 335.0<br>Endereço: Rua Ana Brito da Silva, nº 300<br>Bairro: São Mateus<br>GPS: -22.8057705378236, -43.38626787343182]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 335
+Endereço: Rua Ana Brito da Silva, nº 300
+Bairro: São Mateus
+GPS: -22.8057705378236, -43.38626787343182</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>335.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Ana Brito da Silva, nº 300</value>
+        </Data>
+        <Data name="Bairro">
+          <value>São Mateus</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.8057705378236, -43.38626787343182</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.386268,-22.805771,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Creche Vereador Benilton Ferreira Paes</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 198<br>Endereço: Rua Galdencio Miguel,222<br>Bairro: Jardim Meriti<br>GPS: -22.78211175956485, -43.37048397712658<br>Tipo: Creche<br>Alunos: 198.0<br>Endereço: Rua Galdencio Miguel,222<br>Bairro: Jardim Meriti<br>GPS: -22.78211175956485, -43.37048397712658]]></description>
+      <styleUrl>#icon-1742-FFD600-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 198
+Endereço: Rua Galdencio Miguel,222
+Bairro: Jardim Meriti
+GPS: -22.78211175956485, -43.37048397712658</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>198.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Galdencio Miguel,222</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78211175956485, -43.37048397712658</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.370484,-22.782112,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Adérito Gomes Gouveia</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 410<br>Endereço: Rua Coronel Raimundo Sampaio, 1016<br>Bairro: Jardim Botânico<br>GPS: -22.770069713672594, -43.35233038877401<br>Tipo: <br>Alunos: 410.0<br>Endereço: Rua Coronel Raimundo Sampaio, 1016<br>Bairro: Jardim Botânico<br>GPS: -22.770069713672594, -43.35233038877401]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 410
+Endereço: Rua Coronel Raimundo Sampaio, 1016
+Bairro: Jardim Botânico
+GPS: -22.770069713672594, -43.35233038877401</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>410.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Coronel Raimundo Sampaio, 1016</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Botânico</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.770069713672594, -43.35233038877401</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.35233,-22.77007,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Amélia Barbosa de Moura</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 293<br>Endereço: Rua Gil de Queiróz, s/n°<br>Bairro: Parque Analândia<br>GPS: -22.7985309203626, -43.33227814050215<br>Tipo: <br>Alunos: 293.0<br>Endereço: Rua Gil de Queiróz, s/n°<br>Bairro: Parque Analândia<br>GPS: -22.7985309203626, -43.33227814050215]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 293
+Endereço: Rua Gil de Queiróz, s/n°
+Bairro: Parque Analândia
+GPS: -22.7985309203626, -43.33227814050215</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>293.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Gil de Queiróz, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Analândia</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.7985309203626, -43.33227814050215</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.332278,-22.798531,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Antonio Guedes</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 431<br>Endereço: Rua Brisamar, 155<br>Bairro: Trezentos<br>GPS: -22.78291214432681, -43.33218837527948<br>Tipo: <br>Alunos: 431.0<br>Endereço: Rua Brisamar, 155<br>Bairro: Trezentos<br>GPS: -22.78291214432681, -43.33218837527948]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 431
+Endereço: Rua Brisamar, 155
+Bairro: Trezentos
+GPS: -22.78291214432681, -43.33218837527948</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>431.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Brisamar, 155</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Trezentos</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78291214432681, -43.33218837527948</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.332188,-22.782912,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Armando de Oliveira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 444<br>Endereço: Rua Maria Januária, s/n°<br>Bairro: Centro<br>GPS: -22.799622240154957, -43.36025739061993<br>Tipo: <br>Alunos: 444.0<br>Endereço: Rua Maria Januária, s/n°<br>Bairro: Centro<br>GPS: -22.799622240154957, -43.36025739061993]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 444
+Endereço: Rua Maria Januária, s/n°
+Bairro: Centro
+GPS: -22.799622240154957, -43.36025739061993</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>444.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Maria Januária, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.799622240154957, -43.36025739061993</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.360257,-22.799622,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Barão do Rio Branco</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 269<br>Endereço: Rua Guatemalense, s/n°<br>Bairro: Parque Barão do Rio Branco<br>GPS: -22.77902707060026, -43.365122359938304<br>Tipo: <br>Alunos: 269.0<br>Endereço: Rua Guatemalense, s/n°<br>Bairro: Parque Barão do Rio Branco<br>GPS: -22.77902707060026, -43.365122359938304]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 269
+Endereço: Rua Guatemalense, s/n°
+Bairro: Parque Barão do Rio Branco
+GPS: -22.77902707060026, -43.365122359938304</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>269.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Guatemalense, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Barão do Rio Branco</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77902707060026, -43.365122359938304</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.365122,-22.779027,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Carlos Teixeira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 601<br>Endereço: Rua Rio Claro, 20<br>Bairro: Jardim Alegria<br>GPS: -22.766294562571154, -43.34339045993874<br>Tipo: <br>Alunos: 601.0<br>Endereço: Rua Rio Claro, 20<br>Bairro: Jardim Alegria<br>GPS: -22.766294562571154, -43.34339045993874]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 601
+Endereço: Rua Rio Claro, 20
+Bairro: Jardim Alegria
+GPS: -22.766294562571154, -43.34339045993874</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>601.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Rio Claro, 20</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Alegria</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.766294562571154, -43.34339045993874</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.34339,-22.766295,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Casimiro de Abreu</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 487<br>Endereço: Av. Miguel Couto, 619<br>Bairro: Jardim Sumaré<br>GPS: -22.77901245352862, -43.335485942299314<br>Tipo: <br>Alunos: 487.0<br>Endereço: Av. Miguel Couto, 619<br>Bairro: Jardim Sumaré<br>GPS: -22.77901245352862, -43.335485942299314]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 487
+Endereço: Av. Miguel Couto, 619
+Bairro: Jardim Sumaré
+GPS: -22.77901245352862, -43.335485942299314</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>487.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Miguel Couto, 619</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Sumaré</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77901245352862, -43.335485942299314</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.335486,-22.779012,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Denise Cerqueira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 131<br>Endereço: Av. Mendes de Oliveira s/n°<br>Bairro: Grande Rio<br>GPS: -22.778668077927733, -43.396221348291235<br>Tipo: <br>Alunos: 131.0<br>Endereço: Av. Mendes de Oliveira s/n°<br>Bairro: Grande Rio<br>GPS: -22.778668077927733, -43.396221348291235]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 131
+Endereço: Av. Mendes de Oliveira s/n°
+Bairro: Grande Rio
+GPS: -22.778668077927733, -43.396221348291235</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>131.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Mendes de Oliveira s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Grande Rio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.778668077927733, -43.396221348291235</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.396221,-22.778668,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Dep. Lucas de Andrade Figueira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 507<br>Endereço: Rua Queluz, 23<br>Bairro: Venda Velha<br>GPS: -22.78928100588249, -43.343525848291044<br>Tipo: <br>Alunos: 507.0<br>Endereço: Rua Queluz, 23<br>Bairro: Venda Velha<br>GPS: -22.78928100588249, -43.343525848291044]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 507
+Endereço: Rua Queluz, 23
+Bairro: Venda Velha
+GPS: -22.78928100588249, -43.343525848291044</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>507.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Queluz, 23</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Venda Velha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78928100588249, -43.343525848291044</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.343526,-22.789281,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Dr. Christovam Berberéia</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 263<br>Endereço: Rua Antonio Martins, s/n°<br>Bairro: São Mateus<br>GPS: -22.80951966443458, -43.3814309409022<br>Tipo: <br>Alunos: 263.0<br>Endereço: Rua Antonio Martins, s/n°<br>Bairro: São Mateus<br>GPS: -22.80951966443458, -43.3814309409022]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 263
+Endereço: Rua Antonio Martins, s/n°
+Bairro: São Mateus
+GPS: -22.80951966443458, -43.3814309409022</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>263.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Antonio Martins, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>São Mateus</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.80951966443458, -43.3814309409022</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.381431,-22.80952,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Dr. Getúlio de Moura</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 559<br>Endereço: Rua das Ostras, s/n°<br>Bairro: Parque Tietê<br>GPS: -22.78867124400225, -43.334761188773385<br>Tipo: <br>Alunos: 559.0<br>Endereço: Rua das Ostras, s/n°<br>Bairro: Parque Tietê<br>GPS: -22.78867124400225, -43.334761188773385]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 559
+Endereço: Rua das Ostras, s/n°
+Bairro: Parque Tietê
+GPS: -22.78867124400225, -43.334761188773385</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>559.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua das Ostras, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Tietê</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78867124400225, -43.334761188773385</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.334761,-22.788671,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Dr. João Alves Martins</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 491<br>Endereço: Av. Canal, s/n°<br>Bairro: Vilar dos Teles<br>GPS: -22.773229860518384, -43.363823405962194<br>Tipo: <br>Alunos: 491.0<br>Endereço: Av. Canal, s/n°<br>Bairro: Vilar dos Teles<br>GPS: -22.773229860518384, -43.363823405962194]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 491
+Endereço: Av. Canal, s/n°
+Bairro: Vilar dos Teles
+GPS: -22.773229860518384, -43.363823405962194</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>491.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Canal, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.773229860518384, -43.363823405962194</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.363823,-22.77323,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Edilberto Ribeiro de Castro</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 378<br>Endereço: Rua Euzébio Tostes, s/n°<br>Bairro: Parque Araruama<br>GPS: -22.795058152800355, -43.33816773905551<br>Tipo: <br>Alunos: 378.0<br>Endereço: Rua Euzébio Tostes, s/n°<br>Bairro: Parque Araruama<br>GPS: -22.795058152800355, -43.33816773905551]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 378
+Endereço: Rua Euzébio Tostes, s/n°
+Bairro: Parque Araruama
+GPS: -22.795058152800355, -43.33816773905551</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>378.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Euzébio Tostes, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Araruama</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.795058152800355, -43.33816773905551</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.338168,-22.795058,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Francisca Jeremias</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 434<br>Endereço: Rua Alaide de Menezes, s/n°<br>Bairro: Vilar Formoso<br>GPS: -22.77770304465595, -43.346101773432515<br>Tipo: <br>Alunos: 434.0<br>Endereço: Rua Alaide de Menezes, s/n°<br>Bairro: Vilar Formoso<br>GPS: -22.77770304465595, -43.346101773432515]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 434
+Endereço: Rua Alaide de Menezes, s/n°
+Bairro: Vilar Formoso
+GPS: -22.77770304465595, -43.346101773432515</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>434.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Alaide de Menezes, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar Formoso</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77770304465595, -43.346101773432515</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.346102,-22.777703,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Francisco Agostinho da Costa</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 904<br>Endereço: Rua Rubens Peixoto, s/n°<br>Bairro: São Mateus<br>GPS: -22.803276683592557, -43.381110971584604<br>Tipo: <br>Alunos: 904.0<br>Endereço: Rua Rubens Peixoto, s/n°<br>Bairro: São Mateus<br>GPS: -22.803276683592557, -43.381110971584604]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 904
+Endereço: Rua Rubens Peixoto, s/n°
+Bairro: São Mateus
+GPS: -22.803276683592557, -43.381110971584604</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>904.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Rubens Peixoto, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>São Mateus</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.803276683592557, -43.381110971584604</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.381111,-22.803277,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM General Charles de Gaulle</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 282<br>Endereço: Rua Fernando Rodrigues, s/n°<br>Bairro: Grande Rio<br>GPS: -22.782244067985502, -43.39934943294999<br>Tipo: <br>Alunos: 282.0<br>Endereço: Rua Fernando Rodrigues, s/n°<br>Bairro: Grande Rio<br>GPS: -22.782244067985502, -43.39934943294999]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 282
+Endereço: Rua Fernando Rodrigues, s/n°
+Bairro: Grande Rio
+GPS: -22.782244067985502, -43.39934943294999</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>282.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Fernando Rodrigues, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Grande Rio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.782244067985502, -43.39934943294999</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.399349,-22.782244,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Henfil, Chico e Betinho (Márcia Branquinho)</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 376<br>Endereço: Av, Getúlio Vargas, s/n°<br>Bairro: Vila São José<br>GPS: -22.771601387449426, -43.34181493295042<br>Tipo: <br>Alunos: 376.0<br>Endereço: Av, Getúlio Vargas, s/n°<br>Bairro: Vila São José<br>GPS: -22.771601387449426, -43.34181493295042]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 376
+Endereço: Av, Getúlio Vargas, s/n°
+Bairro: Vila São José
+GPS: -22.771601387449426, -43.34181493295042</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>376.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av, Getúlio Vargas, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São José</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.771601387449426, -43.34181493295042</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.341815,-22.771601,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Ignácio Lucas</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 312<br>Endereço: Rua do Chumbo, 513<br>Bairro: Parque Alian<br>GPS: -22.77073581193522, -43.377759788773815<br>Tipo: <br>Alunos: 312.0<br>Endereço: Rua do Chumbo, 513<br>Bairro: Parque Alian<br>GPS: -22.77073581193522, -43.377759788773815]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 312
+Endereço: Rua do Chumbo, 513
+Bairro: Parque Alian
+GPS: -22.77073581193522, -43.377759788773815</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>312.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua do Chumbo, 513</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Alian</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77073581193522, -43.377759788773815</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.37776,-22.770736,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Iracema Campos Fernandes</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 440<br>Endereço: Rua Elisário de Souza, n° 600<br>Bairro: Vila Norma<br>GPS: -22.788766561495343, -43.405744232949885<br>Tipo: <br>Alunos: 440.0<br>Endereço: Rua Elisário de Souza, n° 600<br>Bairro: Vila Norma<br>GPS: -22.788766561495343, -43.405744232949885]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 440
+Endereço: Rua Elisário de Souza, n° 600
+Bairro: Vila Norma
+GPS: -22.788766561495343, -43.405744232949885</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>440.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Elisário de Souza, n° 600</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Norma</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.788766561495343, -43.405744232949885</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.405744,-22.788767,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Jorge Cheuen</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 264<br>Endereço: Rua Ana, 453<br>Bairro: Vila Tiradentes<br>GPS: -22.788302169436758, -43.38697173479682<br>Tipo: <br>Alunos: 264.0<br>Endereço: Rua Ana, 453<br>Bairro: Vila Tiradentes<br>GPS: -22.788302169436758, -43.38697173479682]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 264
+Endereço: Rua Ana, 453
+Bairro: Vila Tiradentes
+GPS: -22.788302169436758, -43.38697173479682</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>264.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Ana, 453</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Tiradentes</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.788302169436758, -43.38697173479682</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.386972,-22.788302,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM José Bonifácio</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 355<br>Endereço: Rua Juparana, s/n°<br>Bairro: Parque José Bonifácio<br>GPS: -22.791417767961608, -43.36342624459688<br>Tipo: <br>Alunos: 355.0<br>Endereço: Rua Juparana, s/n°<br>Bairro: Parque José Bonifácio<br>GPS: -22.791417767961608, -43.36342624459688]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 355
+Endereço: Rua Juparana, s/n°
+Bairro: Parque José Bonifácio
+GPS: -22.791417767961608, -43.36342624459688</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>355.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Juparana, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque José Bonifácio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.791417767961608, -43.36342624459688</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.363426,-22.791418,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM José Luiz Viviani Gonçalves</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 138<br>Endereço: Av. Mendes de Oliveira, s/n°<br>Bairro: Grande Rio<br>GPS: -22.77832012487245, -43.396997190620716<br>Tipo: <br>Alunos: 138.0<br>Endereço: Av. Mendes de Oliveira, s/n°<br>Bairro: Grande Rio<br>GPS: -22.77832012487245, -43.396997190620716]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 138
+Endereço: Av. Mendes de Oliveira, s/n°
+Bairro: Grande Rio
+GPS: -22.77832012487245, -43.396997190620716</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>138.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Mendes de Oliveira, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Grande Rio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77832012487245, -43.396997190620716</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.396997,-22.77832,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM José Marques Castanheira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 207<br>Endereço: Av. Fagundes Varella, s/n°<br>Bairro: Vila São João<br>GPS: -22.764742969441674, -43.353346929256226<br>Tipo: <br>Alunos: 207.0<br>Endereço: Av. Fagundes Varella, s/n°<br>Bairro: Vila São João<br>GPS: -22.764742969441674, -43.353346929256226]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 207
+Endereço: Av. Fagundes Varella, s/n°
+Bairro: Vila São João
+GPS: -22.764742969441674, -43.353346929256226</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>207.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Fagundes Varella, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São João</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.764742969441674, -43.353346929256226</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.353347,-22.764743,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Leonel de Moura Brizola</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 336<br>Endereço: Rua Santa Terezinha, 239<br>Bairro: Jardim Metrópole<br>GPS: -22.760623865451553, -43.337220884632394<br>Tipo: <br>Alunos: 336.0<br>Endereço: Rua Santa Terezinha, 239<br>Bairro: Jardim Metrópole<br>GPS: -22.760623865451553, -43.337220884632394]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 336
+Endereço: Rua Santa Terezinha, 239
+Bairro: Jardim Metrópole
+GPS: -22.760623865451553, -43.337220884632394</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>336.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Santa Terezinha, 239</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Metrópole</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.760623865451553, -43.337220884632394</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.337221,-22.760624,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Manoel Antonio Sendas</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 399<br>Endereço: Rua Maria Rasuk Vilela, s/n°<br>Bairro: Agostinho Porto<br>GPS: -22.784059671798072, -43.37945132684414<br>Tipo: <br>Alunos: 399.0<br>Endereço: Rua Maria Rasuk Vilela, s/n°<br>Bairro: Agostinho Porto<br>GPS: -22.784059671798072, -43.37945132684414]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 399
+Endereço: Rua Maria Rasuk Vilela, s/n°
+Bairro: Agostinho Porto
+GPS: -22.784059671798072, -43.37945132684414</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>399.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Maria Rasuk Vilela, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Agostinho Porto</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.784059671798072, -43.37945132684414</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.379451,-22.78406,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Manoel Gonçalo</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 318<br>Endereço: Rua Bucareste, 05<br>Bairro: Jardim Metrópole<br>GPS: -22.767963772892287, -43.33498681945638<br>Tipo: <br>Alunos: 318.0<br>Endereço: Rua Bucareste, 05<br>Bairro: Jardim Metrópole<br>GPS: -22.767963772892287, -43.33498681945638]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 318
+Endereço: Rua Bucareste, 05
+Bairro: Jardim Metrópole
+GPS: -22.767963772892287, -43.33498681945638</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>318.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Bucareste, 05</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Metrópole</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.767963772892287, -43.33498681945638</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.334987,-22.767964,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Maria da Gloria Katzenstein</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 194<br>Endereço: Rua Mauro Henrique c/ Antonio Alberto s/n°<br>Bairro: Venda Velha<br>GPS: -22.78487541358349, -43.34567151760894<br>Tipo: <br>Alunos: 194.0<br>Endereço: Rua Mauro Henrique c/ Antonio Alberto s/n°<br>Bairro: Venda Velha<br>GPS: -22.78487541358349, -43.34567151760894]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 194
+Endereço: Rua Mauro Henrique c/ Antonio Alberto s/n°
+Bairro: Venda Velha
+GPS: -22.78487541358349, -43.34567151760894</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>194.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Mauro Henrique c/ Antonio Alberto s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Venda Velha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78487541358349, -43.34567151760894</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.345672,-22.784875,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Maria Rodrigues Cardoso</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 355<br>Endereço: Rua Senador Tarcísio Meira, s/n°<br>Bairro: Jardim Meriti<br>GPS: -22.793552233430383, -43.36862753294964<br>Tipo: <br>Alunos: 355.0<br>Endereço: Rua Senador Tarcísio Meira, s/n°<br>Bairro: Jardim Meriti<br>GPS: -22.793552233430383, -43.36862753294964]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 355
+Endereço: Rua Senador Tarcísio Meira, s/n°
+Bairro: Jardim Meriti
+GPS: -22.793552233430383, -43.36862753294964</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>355.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Senador Tarcísio Meira, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.793552233430383, -43.36862753294964</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.368628,-22.793552,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Milton Rodrigues Pereira</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 412<br>Endereço: Rua Marajó, 305<br>Bairro: Vila Andorinha<br>GPS: -22.771959450844335, -43.351131404115044<br>Tipo: <br>Alunos: 412.0<br>Endereço: Rua Marajó, 305<br>Bairro: Vila Andorinha<br>GPS: -22.771959450844335, -43.351131404115044]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 412
+Endereço: Rua Marajó, 305
+Bairro: Vila Andorinha
+GPS: -22.771959450844335, -43.351131404115044</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>412.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Marajó, 305</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Andorinha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.771959450844335, -43.351131404115044</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.351131,-22.771959,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Octacílio Gonçalves da Silva</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 487<br>Endereço: Rua Belizário Pena, s/n°<br>Bairro: Tomazinho<br>GPS: -22.79984257836174, -43.39273991576133<br>Tipo: <br>Alunos: 487.0<br>Endereço: Rua Belizário Pena, s/n°<br>Bairro: Tomazinho<br>GPS: -22.79984257836174, -43.39273991576133]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 487
+Endereço: Rua Belizário Pena, s/n°
+Bairro: Tomazinho
+GPS: -22.79984257836174, -43.39273991576133</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>487.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Belizário Pena, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Tomazinho</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.79984257836174, -43.39273991576133</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.39274,-22.799843,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Orlando Francisco</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 508<br>Endereço: Rua José Antonio Nohra, Lt. 24 Qd. 03<br>Bairro: Agostinho Porto<br>GPS: -22.78609029137723, -43.388584473432424<br>Tipo: <br>Alunos: 508.0<br>Endereço: Rua José Antonio Nohra, Lt. 24 Qd. 03<br>Bairro: Agostinho Porto<br>GPS: -22.78609029137723, -43.388584473432424]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 508
+Endereço: Rua José Antonio Nohra, Lt. 24 Qd. 03
+Bairro: Agostinho Porto
+GPS: -22.78609029137723, -43.388584473432424</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>508.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua José Antonio Nohra, Lt. 24 Qd. 03</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Agostinho Porto</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78609029137723, -43.388584473432424</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.388584,-22.78609,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Padre Paul Jean Guerry</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 715<br>Endereço: Rua São Francisco de Assis, 181<br>Bairro: Tomazinho<br>GPS: -22.80639034811145, -43.39070270411398<br>Tipo: <br>Alunos: 715.0<br>Endereço: Rua São Francisco de Assis, 181<br>Bairro: Tomazinho<br>GPS: -22.80639034811145, -43.39070270411398]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 715
+Endereço: Rua São Francisco de Assis, 181
+Bairro: Tomazinho
+GPS: -22.80639034811145, -43.39070270411398</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>715.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua São Francisco de Assis, 181</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Tomazinho</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.80639034811145, -43.39070270411398</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.390703,-22.80639,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Presidente Kennedy</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 313<br>Endereço: Rua Botafogo, 60<br>Bairro: Vilar dos Teles<br>GPS: -22.777504875820256, -43.355692990620845<br>Tipo: <br>Alunos: 313.0<br>Endereço: Rua Botafogo, 60<br>Bairro: Vilar dos Teles<br>GPS: -22.777504875820256, -43.355692990620845]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 313
+Endereço: Rua Botafogo, 60
+Bairro: Vilar dos Teles
+GPS: -22.777504875820256, -43.355692990620845</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>313.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Botafogo, 60</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.777504875820256, -43.355692990620845</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.355693,-22.777505,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Prof. Jansen Pereira de Melo</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 1082<br>Endereço: Rua Jansen Pereira de Melo, 28<br>Bairro: Jardim Meriti<br>GPS: -22.785145413896643, -43.371357344596966<br>Tipo: <br>Alunos: 1082.0<br>Endereço: Rua Jansen Pereira de Melo, 28<br>Bairro: Jardim Meriti<br>GPS: -22.785145413896643, -43.371357344596966]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 1082
+Endereço: Rua Jansen Pereira de Melo, 28
+Bairro: Jardim Meriti
+GPS: -22.785145413896643, -43.371357344596966</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>1082.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Jansen Pereira de Melo, 28</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.785145413896643, -43.371357344596966</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.371357,-22.785145,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Prof. Milton Machado</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 463<br>Endereço: Rua Grinaldina Moreira, s/n<br>Bairro: Éden<br>GPS: -22.794759679492376, -43.39941375993793<br>Tipo: <br>Alunos: 463.0<br>Endereço: Rua Grinaldina Moreira, s/n<br>Bairro: Éden<br>GPS: -22.794759679492376, -43.39941375993793]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 463
+Endereço: Rua Grinaldina Moreira, s/n
+Bairro: Éden
+GPS: -22.794759679492376, -43.39941375993793</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>463.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Grinaldina Moreira, s/n</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Éden</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.794759679492376, -43.39941375993793</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.399414,-22.79476,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Prof. Virgílio Machado</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 523<br>Endereço: Rua Delfim Moreira, s/n°<br>Bairro: Vila Rosali<br>GPS: -22.794200469611393, -43.37953591917338<br>Tipo: <br>Alunos: 523.0<br>Endereço: Rua Delfim Moreira, s/n°<br>Bairro: Vila Rosali<br>GPS: -22.794200469611393, -43.37953591917338]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 523
+Endereço: Rua Delfim Moreira, s/n°
+Bairro: Vila Rosali
+GPS: -22.794200469611393, -43.37953591917338</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>523.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Delfim Moreira, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Rosali</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.794200469611393, -43.37953591917338</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.379536,-22.7942,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Profª Almerida Leite de Abreu</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 317<br>Endereço: Av. Fluminense, fundos com Rua 1° de Maio<br>Bairro: Vila Rosali<br>GPS: -22.79372207808201, -43.37469118877329<br>Tipo: <br>Alunos: 317.0<br>Endereço: Av. Fluminense, fundos com Rua 1° de Maio<br>Bairro: Vila Rosali<br>GPS: -22.79372207808201, -43.37469118877329]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 317
+Endereço: Av. Fluminense, fundos com Rua 1° de Maio
+Bairro: Vila Rosali
+GPS: -22.79372207808201, -43.37469118877329</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>317.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Fluminense, fundos com Rua 1° de Maio</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Rosali</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.79372207808201, -43.37469118877329</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.374691,-22.793722,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Profª Lígia da Silva França</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 794<br>Endereço: Av. Comendador Teles, 244<br>Bairro: Praça da Bandeira<br>GPS: -22.77176225051577, -43.37272039062086<br>Tipo: <br>Alunos: 794.0<br>Endereço: Av. Comendador Teles, 244<br>Bairro: Praça da Bandeira<br>GPS: -22.77176225051577, -43.37272039062086]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 794
+Endereço: Av. Comendador Teles, 244
+Bairro: Praça da Bandeira
+GPS: -22.77176225051577, -43.37272039062086</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>794.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Comendador Teles, 244</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Praça da Bandeira</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77176225051577, -43.37272039062086</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.37272,-22.771762,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Profª Mariza Azevedo Catarino</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 216<br>Endereço: Av. Mendes de Oliveira, s/n°<br>Bairro: Grande Rio<br>GPS: -22.778362977374893, -43.39682963110291<br>Tipo: <br>Alunos: 216.0<br>Endereço: Av. Mendes de Oliveira, s/n°<br>Bairro: Grande Rio<br>GPS: -22.778362977374893, -43.39682963110291]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 216
+Endereço: Av. Mendes de Oliveira, s/n°
+Bairro: Grande Rio
+GPS: -22.778362977374893, -43.39682963110291</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>216.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Av. Mendes de Oliveira, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Grande Rio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.778362977374893, -43.39682963110291</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.39683,-22.778363,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Profª. Graça Grijó</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 1436<br>Endereço: Rua Paulo Soares do Nascimento, 305<br>Bairro: Vilar dos Teles<br>GPS: -22.777830389646663, -43.362204700420854<br>Tipo: <br>Alunos: 1436.0<br>Endereço: Rua Paulo Soares do Nascimento, 305<br>Bairro: Vilar dos Teles<br>GPS: -22.777830389646663, -43.362204700420854]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 1436
+Endereço: Rua Paulo Soares do Nascimento, 305
+Bairro: Vilar dos Teles
+GPS: -22.777830389646663, -43.362204700420854</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>1436.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Paulo Soares do Nascimento, 305</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.777830389646663, -43.362204700420854</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.362205,-22.77783,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Roberto Bonifácio de Queirós</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 247<br>Endereço: Rua Antônio Gonzaga, s/n°<br>Bairro: Vila Norma<br>GPS: -22.790952829468615, -43.406988046444<br>Tipo: <br>Alunos: 247.0<br>Endereço: Rua Antônio Gonzaga, s/n°<br>Bairro: Vila Norma<br>GPS: -22.790952829468615, -43.406988046444]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 247
+Endereço: Rua Antônio Gonzaga, s/n°
+Bairro: Vila Norma
+GPS: -22.790952829468615, -43.406988046444</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>247.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Antônio Gonzaga, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Norma</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.790952829468615, -43.406988046444</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.406988,-22.790953,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Rui Barbosa</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 288<br>Endereço: Rua Cristalina, 34<br>Bairro: Éden<br>GPS: -22.783034123280814, -43.3959035111483<br>Tipo: <br>Alunos: 288.0<br>Endereço: Rua Cristalina, 34<br>Bairro: Éden<br>GPS: -22.783034123280814, -43.3959035111483]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 288
+Endereço: Rua Cristalina, 34
+Bairro: Éden
+GPS: -22.783034123280814, -43.3959035111483</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>288.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Cristalina, 34</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Éden</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.783034123280814, -43.3959035111483</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.395904,-22.783034,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Santo Antonio</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 410<br>Endereço: Rua Praça Itanajé, s/n°<br>Bairro: Vilar dos Teles<br>GPS: -22.769978823755583, -43.374270166842656<br>Tipo: <br>Alunos: 410.0<br>Endereço: Rua Praça Itanajé, s/n°<br>Bairro: Vilar dos Teles<br>GPS: -22.769978823755583, -43.374270166842656]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 410
+Endereço: Rua Praça Itanajé, s/n°
+Bairro: Vilar dos Teles
+GPS: -22.769978823755583, -43.374270166842656</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>410.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Praça Itanajé, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.769978823755583, -43.374270166842656</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.37427,-22.769979,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM São João Batista</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 131<br>Endereço: Avenida Fluminense, 45<br>Bairro: Vila Rosali<br>GPS: -22.794137043604554, -43.37435306928474<br>Tipo: <br>Alunos: 131.0<br>Endereço: Avenida Fluminense, 45<br>Bairro: Vila Rosali<br>GPS: -22.794137043604554, -43.37435306928474]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 131
+Endereço: Avenida Fluminense, 45
+Bairro: Vila Rosali
+GPS: -22.794137043604554, -43.37435306928474</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>131.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Fluminense, 45</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila Rosali</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.794137043604554, -43.37435306928474</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.374353,-22.794137,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Unidade Integrada de 1° Grau</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 979<br>Endereço: Rua Floriano, 98<br>Bairro: Coelho da Rocha<br>GPS: -22.78013385978637, -43.38514870780884<br>Tipo: <br>Alunos: 979.0<br>Endereço: Rua Floriano, 98<br>Bairro: Coelho da Rocha<br>GPS: -22.78013385978637, -43.38514870780884]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 979
+Endereço: Rua Floriano, 98
+Bairro: Coelho da Rocha
+GPS: -22.78013385978637, -43.38514870780884</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>979.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Floriano, 98</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Coelho da Rocha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78013385978637, -43.38514870780884</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.385149,-22.780134,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Valério Villas Boas Filho</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 851<br>Endereço: Rua Brasil Valério, Lt. 7A Qd 11<br>Bairro: Venda Velha<br>GPS: -22.78415304612559, -43.34882670596181<br>Tipo: <br>Alunos: 851.0<br>Endereço: Rua Brasil Valério, Lt. 7A Qd 11<br>Bairro: Venda Velha<br>GPS: -22.78415304612559, -43.34882670596181]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 851
+Endereço: Rua Brasil Valério, Lt. 7A Qd 11
+Bairro: Venda Velha
+GPS: -22.78415304612559, -43.34882670596181</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>851.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Brasil Valério, Lt. 7A Qd 11</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Venda Velha</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.78415304612559, -43.34882670596181</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.348827,-22.784153,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Vasco Afonso de Caravalho</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 477<br>Endereço: Rua Projetada, s/n°<br>Bairro: Jardim Paraíso<br>GPS: -22.762133707470557, -43.34334198877411<br>Tipo: <br>Alunos: 477.0<br>Endereço: Rua Projetada, s/n°<br>Bairro: Jardim Paraíso<br>GPS: -22.762133707470557, -43.34334198877411]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 477
+Endereço: Rua Projetada, s/n°
+Bairro: Jardim Paraíso
+GPS: -22.762133707470557, -43.34334198877411</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>477.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Projetada, s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Paraíso</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.762133707470557, -43.34334198877411</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.343342,-22.762134,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Vereador Celso Guerra</name>
+      <description><![CDATA[descrição: Tipo: <br>Alunos: 540<br>Endereço: Rua Urânio, n° 20<br>Bairro: Parque Alian<br>GPS: -22.772426021634292, -43.39010370596213<br>Tipo: <br>Alunos: 540.0<br>Endereço: Rua Urânio, n° 20<br>Bairro: Parque Alian<br>GPS: -22.772426021634292, -43.39010370596213]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: 
+Alunos: 540
+Endereço: Rua Urânio, n° 20
+Bairro: Parque Alian
+GPS: -22.772426021634292, -43.39010370596213</value>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value>540.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Urânio, n° 20</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Alian</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.772426021634292, -43.39010370596213</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3902757,-22.772426,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jardim Infância Municipalizado PIPA</name>
+      <description><![CDATA[descrição: Tipo: Creche<br>Alunos: 187<br>Endereço: Rua Anchieta s/n°<br>Bairro: Praça da Bandeira<br>GPS: -22.770041325674978, -43.37434571945637<br>Tipo: Creche<br>Alunos: 187.0<br>Endereço: Rua Anchieta s/n°<br>Bairro: Praça da Bandeira<br>GPS: -22.770041325674978, -43.37434571945637]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Tipo: Creche
+Alunos: 187
+Endereço: Rua Anchieta s/n°
+Bairro: Praça da Bandeira
+GPS: -22.770041325674978, -43.37434571945637</value>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>187.0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Anchieta s/n°</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Praça da Bandeira</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.770041325674978, -43.37434571945637</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.374346,-22.770041,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EM Vila São João</name>
+      <description><![CDATA[descrição: <br>Tipo: <br>Alunos: <br>Endereço: Rua Lisboa<br>Bairro: Jardim Santa Rosa<br>GPS: -22.770373962155443, -43.350487661649424]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value/>
+        </Data>
+        <Data name="Tipo">
+          <value/>
+        </Data>
+        <Data name="Alunos">
+          <value/>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Lisboa</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Santa Rosa</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.770373962155443, -43.350487661649424</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3504122,-22.7703273,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name/>
+      <description><![CDATA[descrição: <br>Tipo: Creche<br>Alunos: 0<br>Endereço: Rua Irani, 12<br>Bairro: Parque Analândia<br>GPS: -22.80196468832899, -43.3355339454459]]></description>
+      <ExtendedData>
+        <Data name="descrição">
+          <value/>
+        </Data>
+        <Data name="Tipo">
+          <value>Creche</value>
+        </Data>
+        <Data name="Alunos">
+          <value>0</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Irani, 12</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Parque Analândia</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.80196468832899, -43.3355339454459</value>
+        </Data>
+      </ExtendedData>
+    </Placemark>
+  </Document>
+</kml>
