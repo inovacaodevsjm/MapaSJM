@@ -384,7 +384,8 @@ body {
 .image-preview-card {
   position: absolute;
   bottom: 90px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   width: 350px;
   background-color: white;
@@ -397,7 +398,7 @@ body {
 .image-preview-card.hidden {
   display: none;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translate(-50%, 20px);
 }
 
 .close-preview-btn {
@@ -428,6 +429,12 @@ body {
   height: 250px;
   object-fit: cover;
   display: block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#previewImage:hover {
+  opacity: 0.9;
 }
 
 .preview-title {
@@ -436,6 +443,63 @@ body {
   font-weight: 500;
   color: #202124;
   border-top: 1px solid #e0e0e0;
+}
+
+/* Adicionando estilos para o modal de fullscreen de imagens */
+.image-fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  animation: fadeIn 0.3s;
+}
+
+.image-fullscreen-overlay.hidden {
+  display: none;
+}
+
+.image-fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.5);
+  transition: transform 0.2s, background-color 0.2s;
+  z-index: 10003;
+}
+
+.image-fullscreen-close:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.image-fullscreen-close:active {
+  transform: scale(0.95);
+}
+
+#fullscreenImage {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 /* Adicionando estilos para o botão de fullscreen no canto inferior esquerdo */
@@ -654,7 +718,22 @@ body {
     width: calc(100vw - 40px);
     max-width: 350px;
     bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Ajustando botão de fechar fullscreen em mobile */
+  .image-fullscreen-close {
+    top: 10px;
     right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  #fullscreenImage {
+    max-width: 95%;
+    max-height: 95vh;
   }
 }
 
@@ -672,8 +751,8 @@ body {
 }
 
 .marker-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: block;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   position: relative;
@@ -979,56 +1058,209 @@ body {
 
 .error-popup-close:hover {
   background-color: #333;
-  transform: scale(1.1);
 }
 
-.error-popup-close:active {
-  transform: scale(0.95);
+/* Adicionando estilos para o modal de dados de crianças */
+.children-data-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  animation: fadeIn 0.3s;
 }
 
-/* Adding styles for demographic density legend */
-/* Estilos para a legenda de densidade demográfica */
-.density-legend {
-  margin-top: 12px;
-  padding: 12px;
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-}
-
-.density-legend.hidden {
+.children-data-modal-overlay.hidden {
   display: none;
 }
 
-.legend-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: #202124;
-  margin-bottom: 8px;
-}
-
-.legend-items {
+.children-data-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s;
 }
 
-.legend-item {
+.children-data-modal-header {
+  padding: 20px 24px;
+  border-bottom: 2px solid #e8453c;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  color: #5f6368;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e8453c 0%, #f44336 100%);
+  border-radius: 12px 12px 0 0;
 }
 
-.legend-color {
-  width: 24px;
-  height: 16px;
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+.children-data-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
 }
 
-.legend-label {
+.children-data-modal-close {
+  background-color: white;
+  border: none;
+  font-size: 24px;
+  color: #e8453c;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s, transform 0.2s;
+  font-weight: bold;
+}
+
+.children-data-modal-close:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+}
+
+.children-data-modal-body {
+  padding: 24px;
+  overflow-y: auto;
   flex: 1;
+}
+
+.children-data-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.children-data-modal-body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Estilos para a tabela de dados de crianças */
+.children-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.children-data-table thead {
+  background: linear-gradient(135deg, #e8453c 0%, #f44336 100%);
+  color: white;
+}
+
+.children-data-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.children-data-table tbody tr {
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s;
+}
+
+.children-data-table tbody tr:hover {
+  background-color: #fef7f7;
+}
+
+.children-data-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.children-data-table tbody td {
+  padding: 12px 16px;
+  color: #3c4043;
+}
+
+.children-data-table .quantidade {
+  font-weight: 500;
+  color: #202124;
+}
+
+.children-data-table .percentual {
+  color: #e8453c;
+  font-weight: 600;
+}
+
+.children-data-table .total-row {
+  background-color: #fef7f7;
+  border-top: 2px solid #e8453c;
+}
+
+.children-data-table .total-row td {
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+/* Estilização do botão de visualizar sumário de crianças em vermelho */
+.ver-criancas-btn {
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #e8453c 0%, #f44336 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(232, 69, 60, 0.3);
+}
+
+.ver-criancas-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 69, 60, 0.4);
+}
+
+.ver-criancas-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(232, 69, 60, 0.3);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .children-data-modal-content {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .children-data-modal-header {
+    padding: 16px 20px;
+  }
+
+  .children-data-modal-header h3 {
+    font-size: 18px;
+  }
+
+  .children-data-modal-body {
+    padding: 16px;
+  }
+
+  .children-data-table {
+    font-size: 13px;
+  }
+
+  .children-data-table thead th {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .children-data-table tbody td {
+    padding: 10px 12px;
+  }
 }

@@ -62,21 +62,6 @@
         </div>
       </div>
 
-      <!-- Seção Densidade Demográfica -->
-      <div class="menu-section">
-        <div class="section-header" data-section="densidade">
-          <input type="checkbox" id="toggleDensidade" class="section-checkbox">
-          <span class="section-icon">▼</span>
-          <span class="section-title">Densidade Demográfica</span>
-        </div>
-        <div id="densidadeContainer" class="section-content">
-          <div id="densidadeLegend" class="density-legend hidden">
-            <div class="legend-title">Densidade (hab/km²)</div>
-            <div class="legend-items"></div>
-          </div>
-        </div>
-      </div>
-
       <!-- Seção Educação -->
       <div class="menu-section">
         <div class="section-header" data-section="educacao">
@@ -94,6 +79,16 @@
             <input type="checkbox" id="toggleEscolas" class="layer-checkbox">
             <span class="layer-icon" style="background-color: #4ecdc4;"></span>
             <span class="layer-name">Escolas</span>
+          </label>
+          <label class="layer-item">
+            <input type="checkbox" id="toggleEscolasEstaduais" class="layer-checkbox">
+            <span class="layer-icon" style="background-color: #1e88e5;"></span>
+            <span class="layer-name">Escolas Estaduais</span>
+          </label>
+          <label class="layer-item">
+            <input type="checkbox" id="toggleEscolasParticulares" class="layer-checkbox">
+            <span class="layer-icon" style="background-color: #9c27b0;"></span>
+            <span class="layer-name">Escolas Particulares</span>
           </label>
           <label class="layer-item">
             <input type="checkbox" id="toggleNovasConstrucoes" class="layer-checkbox">
@@ -140,11 +135,30 @@
     <div id="previewTitle" class="preview-title"></div>
   </div>
 
+  <!-- Adicionando modal de fullscreen para imagens -->
+  <div id="imageFullscreen" class="image-fullscreen-overlay hidden">
+    <button id="closeImageFullscreen" class="image-fullscreen-close">✕</button>
+    <img id="fullscreenImage" src="/placeholder.svg" alt="Imagem em tela cheia">
+  </div>
+
   <!-- Adding error popup modal for addresses outside São João de Meriti -->
   <div id="errorPopup" class="error-popup-overlay hidden">
     <div class="error-popup-container">
       <button id="closeErrorPopup" class="error-popup-close">✕</button>
       <img src="../Include/Img/popup-erro.png" alt="Erro" class="error-popup-image">
+    </div>
+  </div>
+
+  <!-- Adding modal container for children data summary -->
+  <div id="childrenDataModal" class="children-data-modal-overlay hidden">
+    <div class="children-data-modal-content">
+      <div class="children-data-modal-header">
+        <h3 id="childrenDataTitle">Sumário de Crianças</h3>
+        <button id="closeChildrenDataModal" class="children-data-modal-close">✕</button>
+      </div>
+      <div class="children-data-modal-body">
+        <div id="childrenDataTableContainer"></div>
+      </div>
     </div>
   </div>
 
