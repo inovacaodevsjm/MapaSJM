@@ -1,0 +1,325 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Agostinho Porto",
+        "0 anos": 47,
+        "1 ano": 94,
+        "2 anos": 94,
+        "3 anos": 111,
+        "4 anos": 104,
+        "5 anos": 116,
+        "TOTAL": 566
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.37,
+          -22.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Centro",
+        "0 anos": 93,
+        "1 ano": 159,
+        "2 anos": 179,
+        "3 anos": 189,
+        "4 anos": 184,
+        "5 anos": 211,
+        "TOTAL": 1015
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.36,
+          -22.805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Coelho Da Rocha",
+        "0 anos": 119,
+        "1 ano": 191,
+        "2 anos": 283,
+        "3 anos": 269,
+        "4 anos": 253,
+        "5 anos": 286,
+        "TOTAL": 1401
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.35,
+          -22.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Eden",
+        "0 anos": 131,
+        "1 ano": 255,
+        "2 anos": 312,
+        "3 anos": 335,
+        "4 anos": 335,
+        "5 anos": 339,
+        "TOTAL": 1707
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.34,
+          -22.798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Engenheiro Belford",
+        "0 anos": 26,
+        "1 ano": 40,
+        "2 anos": 57,
+        "3 anos": 70,
+        "4 anos": 61,
+        "5 anos": 74,
+        "TOTAL": 328
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.35,
+          -22.79
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Jardim Meriti",
+        "0 anos": 96,
+        "1 ano": 160,
+        "2 anos": 179,
+        "3 anos": 189,
+        "4 anos": 201,
+        "5 anos": 211,
+        "TOTAL": 1036
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.36,
+          -22.79
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Jardim Metropole",
+        "0 anos": 101,
+        "1 ano": 172,
+        "2 anos": 218,
+        "3 anos": 231,
+        "4 anos": 202,
+        "5 anos": 201,
+        "TOTAL": 1125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.34,
+          -22.79
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Jardim Paraiso",
+        "0 anos": 31,
+        "1 ano": 61,
+        "2 anos": 62,
+        "3 anos": 73,
+        "4 anos": 61,
+        "5 anos": 83,
+        "TOTAL": 371
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.33,
+          -22.793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Jardim Sumare",
+        "0 anos": 60,
+        "1 ano": 93,
+        "2 anos": 120,
+        "3 anos": 108,
+        "4 anos": 115,
+        "5 anos": 131,
+        "TOTAL": 627
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.32,
+          -22.794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Parque Araruama",
+        "0 anos": 53,
+        "1 ano": 98,
+        "2 anos": 146,
+        "3 anos": 141,
+        "4 anos": 179,
+        "5 anos": 171,
+        "TOTAL": 788
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.31,
+          -22.795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Sao Mateus",
+        "0 anos": 107,
+        "1 ano": 158,
+        "2 anos": 236,
+        "3 anos": 209,
+        "4 anos": 214,
+        "5 anos": 226,
+        "TOTAL": 1150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.38,
+          -22.79
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Tomazinho",
+        "0 anos": 67,
+        "1 ano": 105,
+        "2 anos": 141,
+        "3 anos": 145,
+        "4 anos": 151,
+        "5 anos": 133,
+        "TOTAL": 742
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.39,
+          -22.785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Venda Velha",
+        "0 anos": 127,
+        "1 ano": 225,
+        "2 anos": 243,
+        "3 anos": 282,
+        "4 anos": 282,
+        "5 anos": 296,
+        "TOTAL": 1455
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.4,
+          -22.78
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Vila Rosali",
+        "0 anos": 46,
+        "1 ano": 68,
+        "2 anos": 76,
+        "3 anos": 100,
+        "4 anos": 94,
+        "5 anos": 107,
+        "TOTAL": 491
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.37,
+          -22.795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Vila Tiradentes",
+        "0 anos": 38,
+        "1 ano": 72,
+        "2 anos": 90,
+        "3 anos": 89,
+        "4 anos": 93,
+        "5 anos": 92,
+        "TOTAL": 474
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.38,
+          -22.796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Crianças de 0 a 5 anos por bairro": "Vilar Dos Teles",
+        "0 anos": 300,
+        "1 ano": 554,
+        "2 anos": 738,
+        "3 anos": 700,
+        "4 anos": 680,
+        "5 anos": 763,
+        "TOTAL": 3735
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.36,
+          -22.8
+        ]
+      }
+    }
+  ]
+}
