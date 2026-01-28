@@ -2,167 +2,340 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Mapa SJM - Segmentação por Bairro</title>
+  <title>GeoSJM - Sistema de Informações Geográficas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Mapa -->
   <div id="map"></div>
 
-  <!-- Adicionando barra de pesquisa no canto superior direito -->
-  <div class="search-container">
-    <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar instituição..." autocomplete="off" inputmode="text">
-    <div id="searchSuggestions" class="search-suggestions hidden"></div>
+  <div class="custom-zoom-controls">
+    <button id="zoomIn" class="zoom-btn" title="Aumentar Zoom">+</button>
+    <button id="zoomOut" class="zoom-btn" title="Diminuir Zoom">−</button>
   </div>
 
-  <!-- Adicionando botão de fullscreen no canto inferior esquerdo -->
   <div class="fullscreen-control">
     <button id="fullscreenBtn" class="fullscreen-btn" title="Tela cheia">⛶</button>
   </div>
 
-  <!-- Adicionando controles de zoom customizados no canto inferior direito -->
-  <div class="custom-zoom-controls">
-    <button id="zoomIn" class="zoom-btn">+</button>
-    <button id="zoomOut" class="zoom-btn">−</button>
-  </div>
-
-  <!-- Novo menu lateral estilizado como Google Maps -->
   <div id="menu" class="menu-lateral">
-    <!-- Cabeçalho do menu -->
+    
     <div class="menu-header">
-      <button id="menuToggle" class="menu-toggle">☰</button>
-      <div class="menu-title">
-        <h1>Análise Geoespacial SJM</h1>
-        <p>Planejamento e Inovação</p>
+      <div class="header-content">
+        <div class="gov-title">PREFEITURA DE</div>
+        <div class="city-title">SÃO JOÃO DE MERITI</div>
+        <div class="system-subtitle">Análise Geoespacial & Planejamento</div>
       </div>
+      <button id="menuToggle" class="menu-toggle" title="Recolher Menu">☰</button>
     </div>
 
-    <!-- Informações do mapa -->
-    <div class="menu-info">
-      <p class="info-views">Análise Descritiva do Mapa</p>
-      <div class="menu-actions">
-        <a class="action-btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDlhZWQ0MDItNjQ0MC00NjA4LTkwZGMtNDBlMDQwNTZlYTVmIiwidCI6IjE0MmE5MmM3LWMxNjctNGY1Ny05MDg3LTM3ZWVlMGQ0MjA2YyJ9" target="_blank" rel="noopener noreferrer">ABRIR RELATÓRIO</a>
-      </div>
-    </div>
-
-    <!-- Conteúdo do menu -->
-    <div class="menu-content">
-
-      <!-- Seção Bairros -->
-      <div class="menu-section">
-        <div class="section-header" data-section="bairros">
-          <input type="checkbox" id="toggleBairros" class="section-checkbox" checked>
-          <span class="section-icon">▼</span>
-          <span class="section-title">Bairros</span>
+    <div class="menu-scroll-container">
+      
+      <div class="search-section">
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" class="search-input" placeholder="Buscar endereço ou instituição..." autocomplete="off" inputmode="text">
+          <span class="search-icon">🔍</span>
         </div>
-        <div id="bairrosContainer" class="section-content">
-          <!-- Checkboxes serão preenchidos dinamicamente -->
-        </div>
+        <div id="searchSuggestions" class="search-suggestions hidden"></div>
       </div>
 
-      <!-- Seção Educação -->
-      <div class="menu-section">
-        <div class="section-header" data-section="educacao">
-          <input type="checkbox" id="toggleEducacao" class="section-checkbox">
-          <span class="section-icon">▼</span>
-          <span class="section-title">Educação</span>
+      <div class="menu-info-bar">
+        <a class="info-btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDlhZWQ0MDItNjQ0MC00NjA4LTkwZGMtNDBlMDQwNTZlYTVmIiwidCI6IjE0MmE5MmM3LWMxNjctNGY1Ny05MDg3LTM3ZWVlMGQ0MjA2YyJ9" target="_blank" rel="noopener noreferrer">
+          <span class="icon">📊</span> Acessar Relatório BI
+        </a>
+      </div>
+
+      <div class="menu-content">
+
+        <div class="menu-section">
+          <div class="section-header collapsed" data-section="mapStyle">
+            <span class="section-indicator" style="background-color: #6c757d;"></span>
+            <span class="section-title">Visualização do Mapa</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div id="mapStyleContainer" class="section-content collapsed">
+             <label class="layer-item">
+               <input type="radio" name="baseLayer" value="padrao" checked class="layer-radio">
+               <span class="layer-name">Padrão (Ruas)</span>
+             </label>
+             <label class="layer-item">
+               <input type="radio" name="baseLayer" value="satelite" class="layer-radio">
+               <span class="layer-name">Satélite (Imagem Aérea)</span>
+             </label>
+             <label class="layer-item">
+               <input type="radio" name="baseLayer" value="clean" class="layer-radio">
+               <span class="layer-name">Clean (Cinza Claro)</span>
+             </label>
+          </div>
         </div>
-        <div id="educacaoContainer" class="section-content">
-          <label class="layer-item">
-            <input type="checkbox" id="toggleCreches" class="layer-checkbox">
-            <span class="layer-icon" style="background-color: #d43c3c;"></span>
-            <span class="layer-name">Creches</span>
-          </label>
-          <label class="layer-item">
-            <input type="checkbox" id="toggleEscolas" class="layer-checkbox">
-            <span class="layer-icon" style="background-color: #4ecdc4;"></span>
-            <span class="layer-name">Escolas</span>
-          </label>
-          <label class="layer-item">
-            <input type="checkbox" id="toggleEscolasEstaduais" class="layer-checkbox">
-            <span class="layer-icon" style="background-color: #1e88e5;"></span>
-            <span class="layer-name">Escolas Estaduais</span>
-          </label>
-          <label class="layer-item">
-            <input type="checkbox" id="toggleEscolasParticulares" class="layer-checkbox">
-            <span class="layer-icon" style="background-color: #9c27b0;"></span>
-            <span class="layer-name">Escolas Particulares</span>
-          </label>
-          <label class="layer-item">
-            <input type="checkbox" id="toggleNovasConstrucoes" class="layer-checkbox">
-            <span class="layer-icon" style="background-color: #ffa500;"></span>
-            <span class="layer-name">Novas Construções</span>
-          </label>
-          
-          <!-- Adicionando botão de filtros -->
-          <div class="filter-section">
-            <button id="toggleFilters" class="filter-toggle-btn">
-              🔍 Filtrar Instituições
-            </button>
-            <div id="filtersContainer" class="filters-container hidden">
-              <div class="filter-group">
-                <label class="filter-label">Filtrar por Bairro:</label>
-                <select id="filterBairro" class="filter-select">
-                  <option value="">Todos os Bairros</option>
-                </select>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="bairros">
+            <span class="section-indicator"></span>
+            <span class="section-title">Divisão Territorial</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+             <label class="toggle-all-label">
+                <input type="checkbox" id="toggleBairros" checked> Exibir Bairros
+             </label>
+          </div>
+          <div id="bairrosContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="educacao">
+            <span class="section-indicator" style="background-color: #003399;"></span>
+            <span class="section-title">Rede de Educação</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleMunicipal"> Exibir Municipal
+            </label>
+            <label class="toggle-all-label" style="margin-left: 15px;">
+               <input type="checkbox" id="toggleOutros"> Exibir Outros
+            </label>
+         </div>
+          <div id="educacaoContainer" class="section-content collapsed">
+            <!-- Aba Municipal -->
+            <div class="submenu-section">
+              <div class="submenu-header collapsed" data-submenu="municipal">
+                <span class="submenu-title">Municipal</span>
+                <span class="submenu-icon">▼</span>
               </div>
-              <div class="filter-group">
-                <label class="filter-label">Filtrar por Polo:</label>
-                <select id="filterPolo" class="filter-select">
-                  <option value="">Todos os Polos</option>
-                </select>
+              <div id="municipalContainer" class="submenu-content collapsed">
+                <label class="layer-item">
+                  <input type="checkbox" id="toggleCreches" class="layer-checkbox municipal-layer">
+                  <span class="layer-symbol" style="background-color: #d43c3c;"></span>
+                  <span class="layer-name">Creches</span>
+                </label>
+                <label class="layer-item">
+                  <input type="checkbox" id="toggleEscolas" class="layer-checkbox municipal-layer">
+                  <span class="layer-symbol" style="background-color: #4ecdc4;"></span>
+                  <span class="layer-name">Escolas Municipais</span>
+                </label>
               </div>
-              <!-- Adicionando filtro por quantidade mínima de alunos -->
-              <div class="filter-group">
-                <label class="filter-label">Quantidade Mínima de Alunos:</label>
-                <input type="number" id="filterAlunos" class="filter-input" placeholder="Ex: 100" min="0">
+            </div>
+            
+            <!-- Aba Outros -->
+            <div class="submenu-section">
+              <div class="submenu-header collapsed" data-submenu="outros">
+                <span class="submenu-title">Outros</span>
+                <span class="submenu-icon">▼</span>
               </div>
-              <button id="clearFilters" class="clear-filters-btn">Limpar Filtros</button>
+              <div id="outrosContainer" class="submenu-content collapsed">
+                <label class="layer-item">
+                  <input type="checkbox" id="toggleEscolasEstaduais" class="layer-checkbox outros-layer">
+                  <span class="layer-symbol" style="background-color: #1e88e5;"></span>
+                  <span class="layer-name">Escolas Estaduais</span>
+                </label>
+                <label class="layer-item">
+                  <input type="checkbox" id="toggleEscolasParticulares" class="layer-checkbox outros-layer">
+                  <span class="layer-symbol" style="background-color: #9c27b0;"></span>
+                  <span class="layer-name">Escolas Particulares</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Seção Próximas Entregas -->
+            <div class="submenu-section">
+              <div class="submenu-header" data-submenu="proximasEntregas">
+                <input type="checkbox" id="toggleProximasEntregas" class="layer-checkbox">
+                <span class="submenu-title">Proximas Entregas</span>
+                <span class="submenu-icon">▼</span>
+              </div>
+              <div id="proximasEntregasContainer" class="submenu-content collapsed">
+                <!-- Subcamadas por mes serao preenchidas dinamicamente -->
+              </div>
+            </div>
+            
+            <div class="filter-box">
+              <button id="toggleFilters" class="filter-toggle-btn">
+                <span>Filtrar Dados</span> <span>▼</span>
+              </button>
+              <div id="filtersContainer" class="filters-container hidden">
+                <div class="filter-row">
+                  <label>Bairro:</label>
+                  <select id="filterBairro" class="filter-select"><option value="">Todos</option></select>
+                </div>
+                <div class="filter-row">
+                  <label>Polo:</label>
+                  <select id="filterPolo" class="filter-select"><option value="">Todos</option></select>
+                </div>
+                <div class="filter-row">
+                  <label>Mín. Alunos:</label>
+                  <input type="number" id="filterAlunos" class="filter-input" placeholder="0" min="0">
+                </div>
+                <button id="clearFilters" class="clear-filters-btn">Limpar Filtros</button>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="saude">
+            <span class="section-indicator" style="background-color: #e6194b;"></span>
+            <span class="section-title">Rede de Saúde</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleSaude"> Exibir Todos
+            </label>
+         </div>
+          <div id="saudeContainer" class="section-content collapsed">
+            
+            <!-- Seção Próximas Entregas Saúde -->
+            <div class="submenu-section">
+              <div class="submenu-header" data-submenu="proximasEntregasSaude">
+                <input type="checkbox" id="toggleProximasEntregasSaude" class="layer-checkbox">
+                <span class="submenu-title">Proximas Entregas</span>
+                <span class="submenu-icon">▼</span>
+              </div>
+              <div id="proximasEntregasSaudeContainer" class="submenu-content collapsed">
+                <!-- Subcamadas por mes serao preenchidas dinamicamente -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="assistenciaSocial">
+            <span class="section-indicator" style="background-color: #8e44ad;"></span>
+            <span class="section-title">Assistência Social</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleAssistenciaSocial"> Exibir Todos
+            </label>
+         </div>
+          <div id="assistenciaSocialContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="cultura">
+            <span class="section-indicator" style="background-color: #e67e22;"></span>
+            <span class="section-title">Cultura</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleCultura"> Exibir Todos
+            </label>
+         </div>
+          <div id="culturaContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="cidadania">
+            <span class="section-indicator" style="background-color: #ff9daa;"></span>
+            <span class="section-title">Cidadania</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleCidadania"> Exibir Todos
+            </label>
+         </div>
+          <div id="cidadaniaContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="pracas">
+            <span class="section-indicator" style="background-color: #27ae60;"></span>
+            <span class="section-title">Praças e Áreas de Lazer</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="togglePracas"> Exibir Todos
+            </label>
+         </div>
+          <div id="pracasContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+        <div class="menu-section">
+          <div class="section-header" data-section="trabalho">
+            <span class="section-indicator" style="background-color: #2980b9;"></span>
+            <span class="section-title">Trabalho e Emprego</span>
+            <span class="section-icon">▼</span>
+          </div>
+          <div class="section-controls">
+            <label class="toggle-all-label">
+               <input type="checkbox" id="toggleTrabalho"> Exibir Todos
+            </label>
+         </div>
+          <div id="trabalhoContainer" class="section-content collapsed">
+            </div>
+        </div>
+
+      </div> <div class="menu-settings-section">
+        <div class="settings-header">Opções de Visualização</div>
+        <div class="setting-item">
+          <span class="setting-label">Agrupar Marcadores Próximos</span>
+          <label class="switch">
+            <input type="checkbox" id="clusterToggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <p class="setting-desc">Ative para agrupar ícones e reduzir a poluição visual.</p>
       </div>
 
+      <div class="menu-footer">
+        <p>&copy; 2026 Prefeitura de São João de Meriti</p>
+      </div>
+
+    </div> </div> <div id="imagePreview" class="image-preview-card hidden">
+    <div class="card-header">
+       <span id="previewTitle" class="card-title">Instituição</span>
+       <button id="closeImagePreview" class="close-card-btn">✕</button>
+    </div>
+    <div class="card-body">
+      <img id="previewImage" src="/placeholder.svg" alt="Imagem da instituição">
+      <div class="card-hint">Clique na imagem para ampliar</div>
     </div>
   </div>
 
-  <!-- Adicionando card de preview de imagem no canto inferior direito -->
-  <div id="imagePreview" class="image-preview-card hidden">
-    <button id="closeImagePreview" class="close-preview-btn">✕</button>
-    <img id="previewImage" src="/placeholder.svg" alt="Imagem da instituição">
-    <div id="previewTitle" class="preview-title"></div>
+  <div id="imageFullscreen" class="modal-overlay hidden">
+    <button id="closeImageFullscreen" class="modal-close-btn">✕</button>
+    <img id="fullscreenImage" src="" alt="Visualização">
   </div>
 
-  <!-- Adicionando modal de fullscreen para imagens -->
-  <div id="imageFullscreen" class="image-fullscreen-overlay hidden">
-    <button id="closeImageFullscreen" class="image-fullscreen-close">✕</button>
-    <img id="fullscreenImage" src="/placeholder.svg" alt="Imagem em tela cheia">
-  </div>
-
-  <!-- Adding error popup modal for addresses outside São João de Meriti -->
-  <div id="errorPopup" class="error-popup-overlay hidden">
-    <div class="error-popup-container">
-      <button id="closeErrorPopup" class="error-popup-close">✕</button>
-      <img src="../Include/Img/popup-erro.png" alt="Erro" class="error-popup-image">
+  <div id="errorPopup" class="modal-overlay hidden">
+    <div class="modal-content error-modal">
+      <button id="closeErrorPopup" class="modal-close-inner">✕</button>
+      <img src="../Include/Img/popup-erro.png" alt="Erro" class="error-img">
     </div>
   </div>
 
-  <!-- Adding modal container for children data summary -->
-  <div id="childrenDataModal" class="children-data-modal-overlay hidden">
-    <div class="children-data-modal-content">
-      <div class="children-data-modal-header">
-        <h3 id="childrenDataTitle">Sumário de Crianças</h3>
-        <button id="closeChildrenDataModal" class="children-data-modal-close">✕</button>
+  <div id="childrenDataModal" class="modal-overlay hidden">
+    <div class="modal-content data-modal">
+      <div class="modal-header-gov">
+        <h3 id="childrenDataTitle">Dados Demográficos</h3>
+        <button id="closeChildrenDataModal" class="modal-close-gov">✕</button>
       </div>
-      <div class="children-data-modal-body">
+      <div class="modal-body-gov">
         <div id="childrenDataTableContainer"></div>
       </div>
     </div>
   </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
