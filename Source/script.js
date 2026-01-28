@@ -321,6 +321,8 @@ const toggleCreches = document.getElementById("toggleCreches")
 const toggleEscolas = document.getElementById("toggleEscolas")
 const toggleEscolasEstaduais = document.getElementById("toggleEscolasEstaduais")
 const toggleEscolasParticulares = document.getElementById("toggleEscolasParticulares")
+const toggleEducacaoInfantil = document.getElementById("toggleEducacaoInfantil")
+const toggleOutrosParticulares = document.getElementById("toggleOutrosParticulares")
 const toggleNovasConstrucoes = document.getElementById("toggleNovasConstrucoes")
 
 // Toggle "Exibir Municipal" - controla Creches e Escolas Municipais
@@ -337,17 +339,21 @@ toggleMunicipal.addEventListener("change", function () {
   }
 })
 
-// Toggle "Exibir Outros" - controla Escolas Estaduais e Particulares
+// Toggle "Exibir Outros" - controla Escolas Estaduais e Particulares (com subcamadas)
 toggleOutros.addEventListener("change", function () {
   toggleEscolasEstaduais.checked = this.checked
   toggleEscolasParticulares.checked = this.checked
+  toggleEducacaoInfantil.checked = this.checked
+  toggleOutrosParticulares.checked = this.checked
 
   if (this.checked) {
     map.addLayer(escolasEstaduaisLayer)
-    map.addLayer(escolasParticularesLayer)
+    map.addLayer(escolasParticularesEducacaoInfantilLayer)
+    map.addLayer(escolasParticularesOutrosLayer)
   } else {
     map.removeLayer(escolasEstaduaisLayer)
-    map.removeLayer(escolasParticularesLayer)
+    map.removeLayer(escolasParticularesEducacaoInfantilLayer)
+    map.removeLayer(escolasParticularesOutrosLayer)
   }
 })
 
@@ -387,7 +393,8 @@ function aplicarZoomNoClick(marker, zoom = 17) {
 const crechesLayer = criarClusterGroup('#d43c3c');
 const escolasLayer = criarClusterGroup('#4ecdc4');
 const escolasEstaduaisLayer = criarClusterGroup('#1e88e5');
-const escolasParticularesLayer = criarClusterGroup('#9c27b0');
+const escolasParticularesEducacaoInfantilLayer = criarClusterGroup('#9c27b0');
+const escolasParticularesOutrosLayer = criarClusterGroup('#9c27b0');
 const novasConstrucoesLayer = criarClusterGroup('#ffa500');
 
 // Camadas de Proximas Entregas - agrupadas por mes
@@ -633,19 +640,21 @@ let filtroAtivoAlunos = 0
 
 function atualizarContagemEducacao(tipo, count) {
   const mapIds = {
-    Creches: "toggleCreches", Escolas: "toggleEscolas",
-    "Escolas Estaduais": "toggleEscolasEstaduais", "Escolas Particulares": "toggleEscolasParticulares",
-    "Novas Construções": "toggleNovasConstrucoes",
+  Creches: "toggleCreches", Escolas: "toggleEscolas",
+  "Escolas Estaduais": "toggleEscolasEstaduais", "Escolas Particulares": "toggleEscolasParticulares",
+  "Escolas Particulares - Educação Infantil": "toggleEducacaoInfantil",
+  "Escolas Particulares - Outros": "toggleOutrosParticulares",
+  "Novas Construções": "toggleNovasConstrucoes",
   }
   const id = mapIds[tipo]
   if (id) {
-    const checkbox = document.getElementById(id)
-    if (checkbox) {
-      const labelName = checkbox.parentElement.querySelector(".layer-name")
-      if (labelName) labelName.textContent = `${tipo} (${count})`
-    }
+  const checkbox = document.getElementById(id)
+  if (checkbox) {
+  const labelName = checkbox.parentElement.querySelector(".layer-name")
+  if (labelName) labelName.textContent = `${tipo.replace("Escolas Particulares - ", "")} (${count})`
   }
-}
+  }
+  }
 
 function carregarInstituicoes(url, layer, icon, tipo) {
   fetch(url).then(res => res.json()).then(data => {
@@ -712,42 +721,96 @@ function carregarInstituicoes(url, layer, icon, tipo) {
 
 function carregarEscolasEstaduais(url, layer, icon, tipo) {
   fetch(url).then(res => res.json()).then(data => {
-      let count = 0
-      data.features.forEach(feature => {
-        if (!feature.geometry || !feature.geometry.coordinates || feature.geometry.coordinates.length < 2) return
-        const props = feature.properties
-        const coords = feature.geometry.coordinates
-        const nomeEscola = props.NOMES || props.ESCOLA || props.escola || props.name || props.nome
-        const endereco = props.ENDEREÇO || props.endereco || props.Endereco
-        const bairro = props.BAIRRO || props.bairro || props.Bairro
-        const municipio = props.MUNICÍPIO || props.municipio
-        if (!nomeEscola) return
-        count++
+  let count = 0
+  data.features.forEach(feature => {
+  if (!feature.geometry || !feature.geometry.coordinates || feature.geometry.coordinates.length < 2) return
+  const props = feature.properties
+  const coords = feature.geometry.coordinates
+  const nomeEscola = props.NOMES || props.ESCOLA || props.escola || props.name || props.nome
+  const endereco = props.ENDEREÇO || props.endereco || props.Endereco
+  const bairro = props.BAIRRO || props.bairro || props.Bairro
+  const municipio = props.MUNICÍPIO || props.municipio
+  if (!nomeEscola) return
+  count++
+  
+  const iconUrl = icon.options.iconUrl
+  const markerIcon = L.divIcon({
+  className: "custom-marker-with-label estadual-marker",
+  html: `<div class="marker-container"><img src="${iconUrl}" class="marker-icon" /><div class="marker-label">${nomeEscola}</div></div>`,
+  iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32],
+  })
+  const marker = L.marker([coords[1], coords[0]], { icon: markerIcon })
+  aplicarZoomNoClick(marker)
+  let popupContent = `<b>Nome:</b> ${nomeEscola}<br>`
+  if (endereco) popupContent += `<b>Endereço:</b> ${endereco}<br>`
+  if (bairro) popupContent += `<b>Bairro:</b> ${bairro}<br>`
+  if (municipio) popupContent += `<b>Município:</b> ${municipio}<br>`
+  marker.bindPopup(popupContent)
+  
+  layer.addLayer(marker)
+  
+  todasInstituicoes.push({
+  nome: nomeEscola, endereco: endereco, bairro: bairro, tipo: tipo,
+  totalAlunos: 0, marker: marker, coords: [coords[1], coords[0]],
+  })
+  })
+  atualizarContagemEducacao(tipo, count)
+  }).catch(error => console.error(`[v0] Erro ao carregar ${tipo}:`, error))
+  }
 
-        const iconUrl = icon.options.iconUrl
-        const markerIcon = L.divIcon({
-          className: "custom-marker-with-label estadual-marker",
-          html: `<div class="marker-container"><img src="${iconUrl}" class="marker-icon" /><div class="marker-label">${nomeEscola}</div></div>`,
-          iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32],
-        })
-        const marker = L.marker([coords[1], coords[0]], { icon: markerIcon })
-        aplicarZoomNoClick(marker)
-        let popupContent = `<b>Nome:</b> ${nomeEscola}<br>`
-        if (endereco) popupContent += `<b>Endereço:</b> ${endereco}<br>`
-        if (bairro) popupContent += `<b>Bairro:</b> ${bairro}<br>`
-        if (municipio) popupContent += `<b>Município:</b> ${municipio}<br>`
-        marker.bindPopup(popupContent)
-        
-        layer.addLayer(marker)
-        
-        todasInstituicoes.push({
-          nome: nomeEscola, endereco: endereco, bairro: bairro, tipo: tipo,
-          totalAlunos: 0, marker: marker, coords: [coords[1], coords[0]],
-        })
-      })
-      atualizarContagemEducacao(tipo, count)
-    }).catch(error => console.error(`[v0] Erro ao carregar ${tipo}:`, error))
-}
+function carregarEscolasParticulares(url, layerEducacaoInfantil, layerOutros, icon) {
+  fetch(url).then(res => res.json()).then(data => {
+  let countEducacaoInfantil = 0
+  let countOutros = 0
+  data.features.forEach(feature => {
+  if (!feature.geometry || !feature.geometry.coordinates || feature.geometry.coordinates.length < 2) return
+  const props = feature.properties
+  const coords = feature.geometry.coordinates
+  const nomeEscola = props.NOMES || props.ESCOLA || props.escola || props.name || props.nome
+  const endereco = props.ENDEREÇO || props.endereco || props.Endereco
+  const bairro = props.BAIRRO || props.bairro || props.Bairro
+  const municipio = props.MUNICÍPIO || props.municipio
+  const educacaoInfantil = props["EDUCAÇÃO INFANTIL"] ?? props["Educacao Infantil"] ?? 0
+  const preEscolar = props["PRÉ ESCOLAR"] ?? props["Pre Escolar"] ?? 0
+  
+  if (!nomeEscola) return
+  
+  // Determinar a camada de destino baseado nas colunas (valores são números: 1 ou 0)
+  const temEducacaoInfantil = educacaoInfantil == 1 || preEscolar == 1
+  const targetLayer = temEducacaoInfantil ? layerEducacaoInfantil : layerOutros
+  const tipoCategoria = temEducacaoInfantil ? "Escolas Particulares - Educação Infantil" : "Escolas Particulares - Outros"
+  
+  if (temEducacaoInfantil) countEducacaoInfantil++
+  else countOutros++
+  
+  const iconUrl = icon.options.iconUrl
+  const markerIcon = L.divIcon({
+  className: "custom-marker-with-label particular-marker",
+  html: `<div class="marker-container"><img src="${iconUrl}" class="marker-icon" /><div class="marker-label">${nomeEscola}</div></div>`,
+  iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32],
+  })
+  const marker = L.marker([coords[1], coords[0]], { icon: markerIcon })
+  aplicarZoomNoClick(marker)
+  let popupContent = `<b>Nome:</b> ${nomeEscola}<br>`
+  if (endereco) popupContent += `<b>Endereço:</b> ${endereco}<br>`
+  if (bairro) popupContent += `<b>Bairro:</b> ${bairro}<br>`
+  if (municipio) popupContent += `<b>Município:</b> ${municipio}<br>`
+  if (temEducacaoInfantil) popupContent += `<b>Tipo:</b> Educação Infantil<br>`
+  marker.bindPopup(popupContent)
+  
+  targetLayer.addLayer(marker)
+  
+  todasInstituicoes.push({
+  nome: nomeEscola, endereco: endereco, bairro: bairro, tipo: tipoCategoria,
+  totalAlunos: 0, marker: marker, coords: [coords[1], coords[0]],
+  })
+  })
+  atualizarContagemEducacao("Escolas Particulares - Educação Infantil", countEducacaoInfantil)
+  atualizarContagemEducacao("Escolas Particulares - Outros", countOutros)
+  console.log(`[v0] Carregadas ${countEducacaoInfantil} Escolas Particulares - Educação Infantil`)
+  console.log(`[v0] Carregadas ${countOutros} Escolas Particulares - Outros`)
+  }).catch(error => console.error("[v0] Erro ao carregar Escolas Particulares:", error))
+  }
 
 function carregarUnidadesSaude() {
   fetch("../Data/Processed/Saude/Aparelhos.geojson").then(res => res.json()).then(data => {
@@ -1293,7 +1356,8 @@ function aplicarFiltros() {
     if (inst.tipo === "Creches") targetLayer = crechesLayer
     else if (inst.tipo === "Escolas") targetLayer = escolasLayer
     else if (inst.tipo === "Escolas Estaduais") targetLayer = escolasEstaduaisLayer
-    else if (inst.tipo === "Escolas Particulares") targetLayer = escolasParticularesLayer
+    else if (inst.tipo === "Escolas Particulares - Educação Infantil") targetLayer = escolasParticularesEducacaoInfantilLayer
+    else if (inst.tipo === "Escolas Particulares - Outros") targetLayer = escolasParticularesOutrosLayer
     else if (inst.tipo === "Novas Construções") targetLayer = novasConstrucoesLayer
     else if (inst.tipo.startsWith("Saúde")) {
        const subtipo = inst.tipo.replace("Saúde - ", "")
@@ -1349,7 +1413,7 @@ carregarDadosCriancas()
 carregarInstituicoes("../Data/Processed/Educação/NewCreches.geojson", crechesLayer, crecheIcon, "Creches")
 carregarInstituicoes("../Data/Processed/Educação/NewEscolas.geojson", escolasLayer, escolaIcon, "Escolas")
 carregarEscolasEstaduais("../Data/Processed/Educação/EscolasEstaduais.geojson", escolasEstaduaisLayer, escolaEstadualIcon, "Escolas Estaduais")
-carregarEscolasEstaduais("../Data/Processed/Educação/EscolasParticulares.geojson", escolasParticularesLayer, escolaParticularIcon, "Escolas Particulares")
+carregarEscolasParticulares("../Data/Processed/Educação/EscolasParticulares.geojson", escolasParticularesEducacaoInfantilLayer, escolasParticularesOutrosLayer, escolaParticularIcon)
 carregarProximasEntregas()
 carregarUnidadesSaude()
 carregarProximasEntregasSaude()
@@ -1379,9 +1443,30 @@ toggleEscolasEstaduais.addEventListener("change", function () {
 })
 
 toggleEscolasParticulares.addEventListener("change", function () {
-  if (this.checked) map.addLayer(escolasParticularesLayer)
-  else map.removeLayer(escolasParticularesLayer)
+  toggleEducacaoInfantil.checked = this.checked
+  toggleOutrosParticulares.checked = this.checked
+  
+  if (this.checked) {
+    map.addLayer(escolasParticularesEducacaoInfantilLayer)
+    map.addLayer(escolasParticularesOutrosLayer)
+  } else {
+    map.removeLayer(escolasParticularesEducacaoInfantilLayer)
+    map.removeLayer(escolasParticularesOutrosLayer)
+  }
   atualizarToggleOutros()
+})
+
+// Event listeners para as subcamadas de Escolas Particulares
+toggleEducacaoInfantil.addEventListener("change", function () {
+  if (this.checked) map.addLayer(escolasParticularesEducacaoInfantilLayer)
+  else map.removeLayer(escolasParticularesEducacaoInfantilLayer)
+  atualizarToggleEscolasParticulares()
+})
+
+toggleOutrosParticulares.addEventListener("change", function () {
+  if (this.checked) map.addLayer(escolasParticularesOutrosLayer)
+  else map.removeLayer(escolasParticularesOutrosLayer)
+  atualizarToggleEscolasParticulares()
 })
 
 if (toggleNovasConstrucoes) {
@@ -1391,7 +1476,7 @@ if (toggleNovasConstrucoes) {
   })
 }
 
-// Funções para atualizar estado dos toggles Municipal e Outros
+// Funções para atualizar estado dos toggles Municipal, Outros e Escolas Particulares
 function atualizarToggleMunicipal() {
   const creches = toggleCreches.checked
   const escolas = toggleEscolas.checked
@@ -1399,11 +1484,21 @@ function atualizarToggleMunicipal() {
   toggleMunicipal.indeterminate = (creches || escolas) && !(creches && escolas)
 }
 
+function atualizarToggleEscolasParticulares() {
+  const educacaoInfantil = toggleEducacaoInfantil.checked
+  const outros = toggleOutrosParticulares.checked
+  toggleEscolasParticulares.checked = educacaoInfantil && outros
+  toggleEscolasParticulares.indeterminate = (educacaoInfantil || outros) && !(educacaoInfantil && outros)
+  atualizarToggleOutros()
+}
+
 function atualizarToggleOutros() {
   const estaduais = toggleEscolasEstaduais.checked
-  const particulares = toggleEscolasParticulares.checked
+  const educacaoInfantil = toggleEducacaoInfantil.checked
+  const outrosParticulares = toggleOutrosParticulares.checked
+  const particulares = educacaoInfantil && outrosParticulares
   toggleOutros.checked = estaduais && particulares
-  toggleOutros.indeterminate = (estaduais || particulares) && !(estaduais && particulares)
+  toggleOutros.indeterminate = (estaduais || educacaoInfantil || outrosParticulares) && !(estaduais && particulares)
 }
 
 // Funcao para carregar Proximas Entregas agrupadas por mes
@@ -1835,7 +1930,7 @@ const saudeLayerList = Object.values(saudeLayers);
   const pracasLayerList = Object.values(pracasLayers);
   const trabalhoLayerList = Object.values(trabalhoLayers);
   const allLayers = [
-  crechesLayer, escolasLayer, escolasEstaduaisLayer, escolasParticularesLayer, novasConstrucoesLayer, 
+  crechesLayer, escolasLayer, escolasEstaduaisLayer, escolasParticularesEducacaoInfantilLayer, escolasParticularesOutrosLayer, novasConstrucoesLayer,
   ...saudeLayerList, ...assistenciaLayerList, ...culturaLayerList, ...cidadaniaLayerList, ...pracasLayerList, ...trabalhoLayerList
   ];
 
@@ -1882,12 +1977,13 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
     item.addEventListener("click", () => {
       if (searchCircle) map.removeLayer(searchCircle)
       
-      let layerToActivate = null; let toggleToActivate = null
-      if (inst.tipo === "Creches") { layerToActivate = crechesLayer; toggleToActivate = toggleCreches }
-      else if (inst.tipo === "Escolas") { layerToActivate = escolasLayer; toggleToActivate = toggleEscolas }
-      else if (inst.tipo === "Escolas Estaduais") { layerToActivate = escolasEstaduaisLayer; toggleToActivate = toggleEscolasEstaduais }
-      else if (inst.tipo === "Escolas Particulares") { layerToActivate = escolasParticularesLayer; toggleToActivate = toggleEscolasParticulares }
-      else if (inst.tipo === "Novas Construções") { layerToActivate = novasConstrucoesLayer; toggleToActivate = toggleNovasConstrucoes }
+  let layerToActivate = null; let toggleToActivate = null
+  if (inst.tipo === "Creches") { layerToActivate = crechesLayer; toggleToActivate = toggleCreches }
+  else if (inst.tipo === "Escolas") { layerToActivate = escolasLayer; toggleToActivate = toggleEscolas }
+  else if (inst.tipo === "Escolas Estaduais") { layerToActivate = escolasEstaduaisLayer; toggleToActivate = toggleEscolasEstaduais }
+  else if (inst.tipo === "Escolas Particulares - Educação Infantil") { layerToActivate = escolasParticularesEducacaoInfantilLayer; toggleToActivate = toggleEducacaoInfantil }
+  else if (inst.tipo === "Escolas Particulares - Outros") { layerToActivate = escolasParticularesOutrosLayer; toggleToActivate = toggleOutrosParticulares }
+  else if (inst.tipo === "Novas Construções") { layerToActivate = novasConstrucoesLayer; toggleToActivate = toggleNovasConstrucoes }
       else if (inst.tipo.startsWith("Saúde")) {
          const subtipo = inst.tipo.replace("Saúde - ", "")
          layerToActivate = saudeLayers[subtipo]

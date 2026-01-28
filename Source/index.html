@@ -138,11 +138,27 @@
                   <span class="layer-symbol" style="background-color: #1e88e5;"></span>
                   <span class="layer-name">Escolas Estaduais</span>
                 </label>
-                <label class="layer-item">
-                  <input type="checkbox" id="toggleEscolasParticulares" class="layer-checkbox outros-layer">
-                  <span class="layer-symbol" style="background-color: #9c27b0;"></span>
-                  <span class="layer-name">Escolas Particulares</span>
-                </label>
+                
+                <!-- Escolas Particulares - Expansível -->
+                <div class="submenu-section submenu-nested">
+                  <div class="submenu-header collapsed" data-submenu="escolasParticulares">
+                    <input type="checkbox" id="toggleEscolasParticulares" class="layer-checkbox outros-layer">
+                    <span class="submenu-title">Escolas Particulares</span>
+                    <span class="submenu-icon">▼</span>
+                  </div>
+                  <div id="escolasParticularesContainer" class="submenu-content collapsed">
+                    <label class="layer-item">
+                      <input type="checkbox" id="toggleEducacaoInfantil" class="layer-checkbox particulares-layer">
+                      <span class="layer-symbol" style="background-color: #9c27b0;"></span>
+                      <span class="layer-name">Educação Infantil</span>
+                    </label>
+                    <label class="layer-item">
+                      <input type="checkbox" id="toggleOutrosParticulares" class="layer-checkbox particulares-layer">
+                      <span class="layer-symbol" style="background-color: #9c27b0;"></span>
+                      <span class="layer-name">Outros</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
             
