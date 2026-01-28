@@ -1,0 +1,281 @@
+/* =======================================================================
+   ESTILOS ESPECÍFICOS: PÁGINA DE EDUCAÇÃO
+   ======================================================================= */
+
+/* --- 1. VISUAL DOS KPIS (RESTAURADO IGUAL HOME) --- */
+.panorama-section {
+    padding: 40px 0 60px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.kpi-grid-centered {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kpi-card {
+    background: rgba(30, 32, 36, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex: 1 1 200px;
+    max-width: 260px;
+    min-width: 160px;
+    min-height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.kpi-card .kpi-icon { font-size: 2.5rem; margin-bottom: 15px; opacity: 0.8; }
+.kpi-card .kpi-value { font-size: 2rem; font-weight: 700; margin-bottom: 5px; }
+.kpi-card .kpi-value.yellow { color: #FDC806; }
+.kpi-card .kpi-value.green { color: #009039; }
+.kpi-card .kpi-title { font-size: 0.9rem; color: #AAA; text-transform: uppercase; letter-spacing: 1px; }
+
+.panorama-text {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid #FDC806;
+    padding: 25px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 40px;
+    backdrop-filter: blur(5px);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.panorama-text h2 { color: #FFF; font-size: 22px; margin-bottom: 10px; font-weight: 600; }
+.panorama-text p { color: #CCC; font-size: 14px; line-height: 1.6; margin: 0; }
+
+
+/* --- 2. SEÇÃO DE GRÁFICOS (CORREÇÃO DE ALINHAMENTO) --- */
+.section-charts {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.sebrae-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sebrae-card {
+    display: flex;
+    flex-direction: row;
+    
+    /* MUDANÇA CRUCIAL: 'stretch' faz as colunas terem a mesma altura */
+    align-items: stretch; 
+    
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px;
+    min-height: 440px;
+    margin: 0;
+    background: rgba(30, 32, 36, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* Coluna de Informações (Esquerda) */
+.sebrae-info {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    
+    /* ALINHAMENTO FORÇADO AO TOPO */
+    justify-content: flex-start; 
+    align-items: flex-start;
+    text-align: left;
+    
+    height: auto; /* Deixe auto para respeitar o flex stretch */
+}
+
+/* Título */
+.info-title {
+    font-size: 20px; /* Fonte menor */
+    font-weight: 700;
+    color: #FFF;
+    margin-top: 0;       /* Sem margem no topo */
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Subtítulo */
+.info-subtitle {
+    font-size: 14px;
+    color: #CCC;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* Descrição (Ajustada para ficar próxima dos filtros) */
+.info-description {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+    
+    width: 100%;
+    
+    /* MUDANÇAS AQUI: */
+    margin-top: 15px;     /* Distância fixa pequena logo abaixo dos filtros */
+    padding-top: 15px;    /* Espaço interno para a linha */
+    border-top: 1px solid rgba(255,255,255,0.05); /* Linha sutil de separação */
+}
+
+/* Coluna do Gráfico (Direita) */
+.sebrae-chart-wrapper {
+    flex: 1.5;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    min-width: 0;      
+    overflow: hidden;
+    /* Centraliza o gráfico verticalmente na coluna dele se quiser */
+    display: flex;
+    align-items: center; 
+}
+
+
+/* --- 3. FILTROS E TAGS (CORRIGIDO TAMANHO) --- */
+.info-segmentation {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.info-segmentation label {
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+}
+
+/* --- NOVA CLASSE: LINHA DE FILTROS --- */
+.filters-row {
+    display: flex;       /* Ativa o modo lado a lado */
+    gap: 15px;           /* Espaço entre os filtros */
+    width: 100%;         /* Ocupa toda a largura */
+    margin-bottom: 20px; /* Espaço abaixo dos filtros */
+}
+
+/* Ajuste para os containers individuais dentro da linha */
+.filters-row .info-segmentation {
+    flex: 1;             /* Força ambos a terem o mesmo tamanho (50%) */
+    margin-bottom: 0;    /* Remove margens extras */
+}
+
+/* SEU CÓDIGO ATUALIZADO (Com width 100%) */
+.chart-filter {
+    background: rgba(253, 200, 6, 0.05);
+    border: 1px solid rgba(253, 200, 6, 0.2);
+    color: #FDC806;
+    
+    /* MUDANÇA AQUI: */
+    width: 100%;         /* Ocupa 100% do espaço que o 'flex' der para ele */
+    
+    padding: 10px 12px;
+    font-size: 11px;     
+    border-radius: 6px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chart-filter option { background: #1E2024; color: #FFF; }
+
+.chart-filter:hover {
+    background: rgba(253, 200, 6, 0.1);
+    border-color: rgba(253, 200, 6, 0.5);
+}
+
+/* Lista de Checkboxes */
+#legend-container, #legend-container-2 {
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px;
+    width: 60%; /* Mesma largura dos selects */
+}
+
+/* Tag (caso use) */
+.tag-static {
+    display: inline-block;
+    background: rgba(0, 144, 57, 0.1);
+    border: 1px solid rgba(0, 144, 57, 0.3);
+    color: #009039;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .sebrae-card {
+        flex-direction: column;
+        align-items: stretch; /* No celular volta a esticar horizontalmente */
+        padding: 25px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .sebrae-info {
+        margin-bottom: 30px;
+        min-width: auto;
+    }
+
+    .sebrae-chart-wrapper {
+        height: 250px;
+        flex: auto;
+    }
+    
+    .chart-filter, #legend-container, #legend-container-2 {
+        width: 100%; /* No celular ocupa tudo */
+    }
+}
+
+/* --- AJUSTE PONTUAL: FILTROS LADO A LADO --- */
+
+/* 1. Cria a linha horizontal para os dois filtros */
+.filtros-lado-a-lado {
+    display: flex;        /* Coloca lado a lado */
+    gap: 15px;            /* Espaço entre eles */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 2. Força cada container de filtro a ocupar apenas o espaço necessário */
+.filtros-lado-a-lado .info-segmentation {
+    flex: 1;              /* Divide o espaço igualmente */
+    width: auto;          /* Reseta larguras antigas */
+    margin-bottom: 0;     /* Remove margem extra */
+}
+
+/* 3. Ajusta o Select para respeitar o tamanho reduzido */
+.filtros-lado-a-lado .chart-filter {
+    width: 100%;          /* Ocupa 100% do espaço REDUZIDO que demos a ele */
+}

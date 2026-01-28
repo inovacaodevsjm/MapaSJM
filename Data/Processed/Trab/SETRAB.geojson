@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "SETRAB",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "descrição": "Rua César Lemos, 22 (localizado no shopping do jeans)", "Bairro": "Vilar dos Teles", "GPS": "-22.77688595544507, -43.35991843935298" }, "geometry": { "type": "Point", "coordinates": [ -43.3598708, -22.7769158, 0.0 ] } },
+{ "type": "Feature", "properties": { "descrição": "Rua Maria Soares Sendas, 111", "Bairro": "Centro", "GPS": "-22.79626857616254, -43.352654228097165" }, "geometry": { "type": "Point", "coordinates": [ -43.3527918, -22.7962845, 0.0 ] } },
+{ "type": "Feature", "properties": { "descrição": "R. Aldenor Ribeiro de Matos, 175 (SHOPPING DO JEANS)", "Bairro": "Vilar dos Teles", "GPS": "-22.776863222219447, -43.359394975508906" }, "geometry": { "type": "Point", "coordinates": [ -43.3593948, -22.7768823, 0.0 ] } }
+]
+}

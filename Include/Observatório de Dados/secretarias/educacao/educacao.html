@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJM - Secretaria de Educação</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="../../style.css">
+    
+    <link rel="stylesheet" href="educacao.css">
+    
+    <script src="educacao.js" defer></script>
+</head>
+<body>
+
+    <div class="top-gradient-line"></div>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo-left">
+                <img src="../../assets/img/logo-horizontal-white.png" alt="Prefeitura SJM">
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="#">Indicadores</a></li>
+                    <li><a href="#">Painéis</a></li>
+                    <li><a href="#">Mapas</a></li>
+                    <li><a href="#">Institucional</a></li>
+                    <li><a href="#">Dados Abertos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 40vh; padding-top: 140px; display:flex; align-items:center; justify-content:center;">
+        <div class="container hero-content" style="text-align: center;">
+            <h1>Educação <span class="text-gradient">em Dados</span></h1>
+            <p>Monitoramento estratégico e indicadores de qualidade da rede municipal de ensino de São João de Meriti.</p>
+        </div>
+    </section>
+
+    <section class="panorama-section container">
+        
+        <div class="panorama-text">
+            <h2>📊 Panorama Geral da Rede Educacional</h2>
+            <p>
+                Visão consolidada da rede municipal: <strong>71 escolas</strong>, <strong>1.111 turmas</strong> e mais de <strong>25 mil alunos</strong>.
+                Suporte de <strong>1.462 professores</strong> e <strong>2.066 funcionários</strong>, garantindo o funcionamento das unidades.
+            </p>
+        </div>
+
+        <div class="kpi-grid-centered">
+            
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">🏫</div>
+                <div class="kpi-value yellow count-up" data-target="71">0</div>
+                <div class="kpi-title">Escolas Municipais</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">🎓</div>
+                <div class="kpi-value green count-up" data-target="25181">0</div>
+                <div class="kpi-title">Alunos Matriculados</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">👨‍🏫</div>
+                <div class="kpi-value yellow count-up" data-target="1462">0</div>
+                <div class="kpi-title">Professores</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">💼</div>
+                <div class="kpi-value green count-up" data-target="2066">0</div>
+                <div class="kpi-title">Funcionários</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">📚</div>
+                <div class="kpi-value yellow count-up" data-target="1111">0</div>
+                <div class="kpi-title">Turmas Ativas</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">👥</div>
+                <div class="kpi-value green count-up" data-target="24322">0</div>
+                <div class="kpi-title">Responsáveis</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">🪑</div>
+                <div class="kpi-value yellow count-up" data-target="6596">0</div>
+                <div class="kpi-title">Vagas Disponíveis</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">📝</div>
+                <div class="kpi-value green count-up" data-target="801">0</div>
+                <div class="kpi-title">Aulas Cadastradas</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">📉</div>
+                <div class="kpi-value green count-up" data-target="0">0</div>
+                <div class="kpi-title">Alunos Infrequentes</div>
+            </div>
+
+            <div class="kpi-card card-gradient-border">
+                <div class="kpi-icon">📅</div>
+                <div class="kpi-value yellow count-up" data-target="1">0</div>
+                <div class="kpi-title">Eventos Educacionais</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-charts container" style="margin-top: 50px;">
+        <h2 class="section-title">Indicadores <span class="text-gradient">Secundários</span></h2>
+        
+        <div class="sebrae-list">
+            <div class="analise-card card-gradient-border sebrae-card" style="grid-column: span 2;"> <div class="sebrae-info">
+                    <h3 class="info-title">Evolução das Matrículas na Educação Básica</h3>
+                    
+                    <div class="filters-row">
+                        <div class="info-segmentation" style="width: 100%;">
+                            <label>Rede de Ensino</label>
+                            <select class="chart-filter" disabled style="background: #2a2a2a; color: #aaa; cursor: default;">
+                                <option selected>Municipal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="info-description">
+                        A rede municipal de São João de Meriti apresentou um crescimento nas matrículas da Educação Básica. 
+                        Em <strong>2018</strong>, foram registradas <strong>26.188</strong> matrículas. 
+                        Após um período de oscilação, o número chegou a <strong>28.377</strong> em <strong>2024</strong>.
+                        <br><br>
+                        Dados fornecidos por <strong>CENSO</strong>.
+                    </p>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartEvolucaoMatriculas"></canvas>
+                </div>
+            </div>
+
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Taxas de Rendimento</h3>
+                    
+                    <div class="info-segmentation">
+                        <label>Indicador</label>
+                        <select id="filterTaxasType" class="chart-filter" style="width: 60%;">
+                            <option value="distorcao">Taxa de Distorção Idade-Série</option>
+                            <option value="abandono">Taxa de Abandono Escolar</option>
+                        </select>
+                    </div>
+
+                    <p class="info-description">
+                        A taxa de distorção idade-série do município do São João De Meriti variou de <strong>29.8%</strong> em 2018 para <strong>25.4%</strong> em 2024 para o Ensino Fundamental, e de <strong>24.9%</strong> em 2018 para <strong>21.3%</strong> em 2024 para o Ensino Médio.
+                        <br><br>
+                        Dados fornecidos por <strong>CENSO - Conjunto de Dados Estatísticos Detalhados sobre a População</strong>.
+                    </p>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartTaxasRendimento"></canvas>
+                </div>
+            </div>
+
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Distribuição de Matrículas</h3>
+                    
+                    <div class="filters-row">
+                        <div class="info-segmentation" style="width: 100%;">
+                            <label>Etapa de Ensino</label>
+                            <select id="filterMatriculasType" class="chart-filter">
+                                <option value="infantil">Educação Infantil</option>
+                                <option value="fundamental">Ensino Fundamental</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="info-description">
+                        Em São João De Meriti, em 2024, no âmbito de <strong>Educação Infantil</strong>, a modalidade <strong>Pré-escola</strong> representa <strong>70.8%</strong> do total, somando <strong>9,476</strong> matrículas.
+                        <br><br>
+                        Esta visualização apresenta a distribuição relativa das matrículas ao longo dos anos.
+                        <br><br>
+                        Dados fornecidos por <strong>CENSO</strong>.
+                    </p>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartMatriculas"></canvas>
+                </div>
+            </div>
+            
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Pontuação Média no ENEM</h3>
+                    
+                    <div class="filters-row">
+                        <div class="info-segmentation">
+                            <label>Período</label>
+                            <select id="filterEnemYear2" class="chart-filter">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                            </select>
+                        </div>
+
+                        <div class="info-segmentation">
+                            <label>Categoria</label>
+                            <select id="filterEnemCategory2" class="chart-filter">
+                                <option value="genero">Gênero</option>
+                                <option value="localizacao">Localização</option>
+                                <option value="administracao">Administração</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="info-description">
+                        Este indicador monitora o desempenho anual dos estudantes da rede.
+                    </p>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartEnem2"></canvas>
+                </div>
+            </div>
+
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Comparativo ENEM (Análise B)</h3>
+                    <div class="info-segmentation">
+                        <label style="margin-bottom:10px; display:block; color:#CCC;">Municípios:</label>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="Brasil" checked class="mun-checkbox-2"> <span style="color:#009039;">🇧🇷 Brasil</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="Rio De Janeiro" checked class="mun-checkbox-2"> <span style="color:#00A8E8;">🏖️ Rio de Janeiro</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="São Gonçalo" checked class="mun-checkbox-2"> <span style="color:#8E44AD;">🏙️ São Gonçalo</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="São João De Meriti" checked class="mun-checkbox-2"> <span style="color:#FDC806;">📍 São João de Meriti</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartEnemComparativo2"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-charts container">
+        <h2 class="section-title">Indicadores de <span class="text-gradient">Desempenho</span></h2>
+        
+        <div class="sebrae-list">
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Pontuação Média no ENEM</h3>
+                    
+                    <div class="filters-row">
+                        <div class="info-segmentation">
+                            <label>Período</label>
+                            <select id="filterEnemYear" class="chart-filter">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                            </select>
+                        </div>
+
+                        <div class="info-segmentation">
+                            <label>Categoria</label>
+                            <select id="filterEnemCategory" class="chart-filter">
+                                <option value="genero">Gênero</option>
+                                <option value="localizacao">Localização</option>
+                                <option value="administracao">Administração</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="info-description">
+                        Este indicador monitora o desempenho anual dos estudantes da rede nas quatro áreas do conhecimento.
+                    </p>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartEnem"></canvas>
+                </div>
+            </div>
+
+
+            <div class="analise-card card-gradient-border sebrae-card">
+                <div class="sebrae-info">
+                    <h3 class="info-title">Comparativo ENEM</h3>
+                    <div class="info-segmentation">
+                        <label style="margin-bottom:10px; display:block; color:#CCC;">Municípios:</label>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="Brasil" checked class="mun-checkbox"> <span style="color:#009039;">🇧🇷 Brasil</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="Rio De Janeiro" checked class="mun-checkbox"> <span style="color:#00A8E8;">🏖️ Rio de Janeiro</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="São Gonçalo" checked class="mun-checkbox"> <span style="color:#8E44AD;">🏙️ São Gonçalo</span>
+                            </label>
+                            <label style="color:#FFF; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:8px;">
+                                <input type="checkbox" value="São João De Meriti" checked class="mun-checkbox"> <span style="color:#FDC806;">📍 São João de Meriti</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sebrae-chart-wrapper">
+                    <canvas id="chartEnemComparativo"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="../../assets/img/logo-sjm-color.png" alt="SJM Logo" style="height: 60px;">
+                <p style="margin-top:15px; font-size:12px; color:#666; line-height:1.5;">
+                    PREFEITURA DE SÃO JOÃO DE MERITI<br>
+                    RUMO A UMA NOVA HISTÓRIA
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li><a href="#">Portal da Transparência</a></li>
+                    <li><a href="#">Diário Oficial</a></li>
+                    <li><a href="#">Acesso à Informação</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>ObservaMeriti</h3>
+                <ul>
+                    <li><a href="#">Indicadores</a></li>
+                    <li><a href="#">Painéis Interativos</a></li>
+                    <li><a href="#">Mapas</a></li>
+                    <li><a href="#">Institucional</a></li>
+                    <li><a href="#">Dados Abertos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p style="font-size:14px; color:#555;">Email: observameriti@meriti.gov.br</p>
+                <p style="font-size:14px; color:#555; margin-top:10px;">Av. Presidente Lincoln, 899 - Jardim Meriti</p>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p>&copy; 2026 Observatório de Dados - Prefeitura de São João de Meriti.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Clínica dos Olhos - SJM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="../../../style.css">
+
+    <style>
+        /* --- ESTILOS ESPECÍFICOS DO DASHBOARD --- */
+        body {
+            background-color: #0F1115;
+            overflow-x: hidden;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 28px;
+            color: #FDC806;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(253, 200, 6, 0.2);
+        }
+
+        .dashboard-header p {
+            color: #DDD;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.05);
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .dash-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr 350px; /* Aumentei um pouco a esquerda para caber o texto */
+            gap: 25px;
+            align-items: stretch;
+            min-height: 400px;
+        }
+
+        @media (max-width: 1100px) {
+            .dash-grid { grid-template-columns: 1fr 1fr; }
+            .beneficio-card { grid-column: span 2; }
+        }
+        @media (max-width: 768px) {
+            .dash-grid { grid-template-columns: 1fr; }
+            .beneficio-card { grid-column: span 1; }
+        }
+
+        .dash-card {
+            background: rgba(30, 32, 36, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Lista de Benefícios */
+        .beneficio-list { list-style: none; padding: 0; margin-top: 10px; width: 100%; }
+        .beneficio-list li {
+            margin-bottom: 15px; padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex; align-items: flex-start;
+        }
+        .beneficio-list li:last-child { border: none; margin: 0; }
+        
+        .icon-check {
+            background: rgba(0, 144, 57, 0.2); color: #009039;
+            min-width: 24px; height: 24px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-right: 12px; font-size: 12px; margin-top: 2px;
+        }
+
+        .text-content h4 { color: #FFF; font-size: 14px; margin-bottom: 4px; font-weight: 600; }
+        .text-content p { color: #888; font-size: 12px; line-height: 1.5; }
+
+        .status-badge {
+            margin-top: 15px; padding: 8px 0; width: 100%;
+            text-align: center; border-radius: 8px;
+            font-weight: 700; text-transform: uppercase;
+            font-size: 13px; letter-spacing: 1px;
+        }
+
+        /* Estilo para a caixa de pendências */
+        .pendencias-box {
+            margin-top: 20px;
+            background: rgba(255, 171, 0, 0.05); /* Fundo amarelado sutil */
+            border: 1px solid rgba(255, 171, 0, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            width: 100%;
+        }
+        .pendencias-list li {
+            font-size: 10px;
+            color: #ccc;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .pendencias-list li::before {
+            content: '•';
+            color: #FFAB00;
+            margin-right: 6px;
+            font-size: 14px;
+            line-height: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-gradient-line"></div>
+
+    <header class="dashboard-header">
+        <h1>Clínica dos Olhos Aníbal Viriato</h1>
+        <p>📍Rua São João Batista, 610</p>
+    </header>
+
+    <div class="container" style="padding-bottom: 50px;">
+        
+        <div class="dash-grid">
+
+            <div class="dash-card" style="align-items: center; justify-content: flex-start;">
+                <h3 style="color: #FFF; margin-bottom: 20px; font-weight: 500;">Status da Obra</h3>
+                
+                <div style="position: relative; height: 160px; width: 160px;">
+                    <canvas id="chartProgresso"></canvas>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 800; color: #FFF;" id="percentText">
+                        --%
+                    </div>
+                </div>
+
+                <div id="statusBadge" class="status-badge">Carregando...</div>
+                
+                <div style="margin-top: 15px; width: 100%; display: flex; justify-content: space-between; font-size: 11px; color: #666; padding: 0 5px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px;">
+                    <span>Início: <strong style="color: #888">22/09/25</strong></span>
+                    <span>Prev.: <strong style="color: #888">31/03/26</strong></span>
+                </div>
+
+                <div class="pendencias-box">
+                    <h4 style="color: #FFAB00; font-size: 11px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+                        ⚠️ Pendências Administrativas
+                    </h4>
+                    <ul class="pendencias-list" style="list-style: none; padding: 0; margin: 0;">
+                        <li>Aguardando liberação para cadastramento dos equipamentos e materiais permanentes para aparelhamento da policlínica.</li>
+                        <li>Iniciar planejamento do aparelhamento, conforme planta baixa.</li>
+                        <li>Aguardando maiores esclarecimentos por parte do Ministério da Saúde.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="dash-card" style="padding: 10px;">
+                <img src="../../../assets/img/clinica-olhos.jpg" 
+                     alt="Clínica dos Olhos" 
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+            </div>
+
+            <div class="dash-card beneficio-card">
+                <h3 style="color: #FDC806; margin-bottom: 20px; font-size: 18px;">Impacto na Saúde</h3>
+                
+                <ul class="beneficio-list">
+                    <li>
+                        <div class="icon-check">✓</div>
+                        <div class="text-content">
+                            <h4>Cirurgias Gratuitas</h4>
+                            <p>Mutirões de catarata e pterígio para zerar filas.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-check">✓</div>
+                        <div class="text-content">
+                            <h4>Exames de Ponta</h4>
+                            <p>Retinografia, tonometria e mapeamento de retina.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-check">✓</div>
+                        <div class="text-content">
+                            <h4>Prevenção</h4>
+                            <p>Combate ao Glaucoma e Cegueira evitável.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-check">✓</div>
+                        <div class="text-content">
+                            <h4>Atendimento</h4>
+                            <p>Consultas especializadas para todas as idades.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn-painel" style="margin-top: auto; text-align: center;">Voltar para Saúde</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. CONFIGURAÇÃO DAS DATAS (Ano-Mês-Dia + T12:00:00 para travar no meio dia)
+            // Isso evita o erro de aparecer "dia anterior" por causa do fuso horário.
+            const dataInicio = new Date('2025-11-22T12:00:00'); 
+            const dataFim    = new Date('2026-03-12T12:00:00'); 
+
+            // 2. DATA DE HOJE (Automática)
+            const dataHoje = new Date(); 
+
+            // -----------------------------------------------------------
+            // CÁLCULO
+            // -----------------------------------------------------------
+            const totalTempoObra = dataFim - dataInicio;
+            const tempoPassado   = dataHoje - dataInicio;
+
+            let percentual = 0;
+            if (totalTempoObra > 0) {
+                percentual = (tempoPassado / totalTempoObra) * 100;
+            }
+
+            // Travas de segurança
+            if (percentual > 100) percentual = 100;
+            if (percentual < 0) percentual = 0; // Se hoje for antes de nov/2025, fica 0%
+            
+            const percentualFinal = Math.floor(percentual);
+
+            // -----------------------------------------------------------
+            // ATUALIZAÇÃO VISUAL
+            // -----------------------------------------------------------
+
+            document.getElementById('percentText').innerText = percentualFinal + '%';
+            
+            // Formata a data para dia/mês/ano
+            const opcoesData = { day: '2-digit', month: '2-digit', year: 'numeric' }; // year: 'numeric' usa 2025 (4 digitos)
+            const textoInicio = dataInicio.toLocaleDateString('pt-BR', opcoesData);
+            const textoFim    = dataFim.toLocaleDateString('pt-BR', opcoesData);
+            
+            // Atualiza os textos dos spans de data
+            // Procura os spans dentro da div abaixo do badge
+            const divDatas = document.getElementById('statusBadge').nextElementSibling;
+            if (divDatas) {
+                // Seleciona os spans internos (Início e Previsão)
+                const spans = divDatas.querySelectorAll('span strong');
+                if (spans.length >= 2) {
+                    spans[0].innerText = textoInicio; // Atualiza data início
+                    spans[1].innerText = textoFim;    // Atualiza data fim
+                }
+            }
+
+            // Status Badge
+            const badge = document.getElementById('statusBadge');
+            
+            if (percentualFinal === 100) {
+                badge.innerText = "OBRA CONCLUÍDA";
+                badge.style.background = "rgba(0, 144, 57, 0.2)";
+                badge.style.color = "#009039";
+                badge.style.border = "1px solid rgba(0, 144, 57, 0.5)";
+            } else {
+                badge.innerText = "EM ANDAMENTO";
+                badge.style.background = "rgba(253, 200, 6, 0.2)";
+                badge.style.color = "#FDC806";
+                badge.style.border = "1px solid rgba(253, 200, 6, 0.5)";
+            }
+
+            // Gráfico
+            const ctx = document.getElementById('chartProgresso');
+            const corGrafico = percentualFinal === 100 ? '#009039' : '#FDC806';
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Concluído', 'Restante'],
+                    datasets: [{
+                        data: [percentualFinal, 100 - percentualFinal],
+                        backgroundColor: [corGrafico, 'rgba(255, 255, 255, 0.05)'],
+                        borderWidth: 0,
+                        cutout: '85%',
+                        borderRadius: 20
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { tooltip: { enabled: false }, legend: { display: false } },
+                    animation: { animateScale: true, animateRotate: true, duration: 2000 }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

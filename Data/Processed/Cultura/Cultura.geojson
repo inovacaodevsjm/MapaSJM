@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.368823,
+          -22.77968
+        ]
+      },
+      "properties": {
+        "nome": "Centro Cultural",
+        "descrição": "Rua Panamense 23-76 - Jardim Meriti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.339826,
+          -22.776384
+        ]
+      },
+      "properties": {
+        "nome": "Museu Marinheiro João Cândido",
+        "descrição": "Estrada Paineiras 92 - Jardim Sumare"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -43.370583,
+          -22.77525
+        ]
+      },
+      "properties": {
+        "nome": "Espaço Marinheiro João Cândido",
+        "descrição": "Rua Clemente Pereira Leandro 39 - Vilar dos Teles"
+      }
+    }
+  ]
+}

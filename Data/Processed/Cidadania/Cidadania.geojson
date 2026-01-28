@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"name": "Cidadania",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nome": "CENTRO DE ATENDIMENTO A MULHER", "Endereço": "Rua Defensor Público Zilmar Pinaud - Lote 14 Quadra 48", "Bairro": "Jardim Meriti", "GPS": "-22.777686571742823, -43.36908998249317" }, "geometry": { "type": "Point", "coordinates": [ -43.3690629, -22.777719, 0.0 ] } }]
+}

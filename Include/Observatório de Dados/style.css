@@ -1,0 +1,555 @@
+/* =======================================================================
+   ARQUIVO DE ESTILOS - VERSÃO VISUAL V5 (Correção de Sombreamento)
+   ======================================================================= */
+
+:root {
+  --bg-dark: #000000;
+  --bg-card: #141414;
+  --text-white: #FFFFFF;
+  --text-gray: #B0B0B0;
+  
+  /* Gradientes Oficiais */
+  --grad-start: #009039;
+  --grad-mid: #FDC806;
+  --grad-end: #0000A8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- LINHA DE TOPO GRADIENTE --- */
+.top-gradient-line {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, var(--grad-start), var(--grad-mid), var(--grad-end));
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+/* --- HEADER (Atualizado com Logos maiores) --- */
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  height: 130px; 
+  display: flex;
+  align-items: center;
+  
+  /* A ALTERAÇÃO É AQUI: */
+  border-bottom: none;  /* Antes era: 1px solid #222 */
+  
+  margin-top: 4px;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* LOGO ESQUERDA (Horizontal) */
+.logo-left img { 
+  /* Era 35px, agora é 70px */
+  height: 70px; 
+  width: auto; /* Mantém a proporção correta */
+}
+
+/* LOGO DIREITA (Brasão Quadrado) */
+.logo-right img { 
+  /* Era 45px, agora é 90px */
+  height: 90px; 
+  width: auto; /* Mantém a proporção correta */
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 30px;         /* Mantém o espaço entre os itens */
+  list-style: none;  /* REMOVE as "bolinhas" da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: var(--text-white);
+  text-decoration: none;
+  
+  /* AUMENTO DE TAMANHO (~20% maior que antes) */
+  font-size: 20px;
+  
+  /* FONTE MAIS FINA (Light) */
+  font-weight: 300; 
+  
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #FDC806; /* Amarelo Oficial SJM */
+  /* Opcional: Adiciona um brilho sutil amarelo */
+  text-shadow: 0 0 10px rgba(253, 200, 6, 0.4); 
+}
+/* --- TEXTO GRADIENTE (Limpo, sem sombra) --- */
+.text-gradient {
+  background: linear-gradient(to right, #009039, #FDC806);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.hero {
+  position: relative;
+  /* Reduzi de 600px para 450px para aproximar tudo */
+  min-height: 450px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -84px;
+  padding-top: 100px;
+  
+  background: 
+    linear-gradient(to bottom, 
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.65) 50%,
+      rgba(0,0,0,1) 100%
+    ),
+    url('assets/img/Imagem do Topo do site.png');
+  
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  /* REMOVIDO: text-shadow */
+}
+
+.hero p {
+  color: #DDD;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  /* REMOVIDO: text-shadow */
+}
+
+/* --- BORDA GRADIENTE FINA (1px) --- */
+.card-gradient-border {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Pseudo-elemento cria a borda de 1px */
+.card-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px; /* Apenas 1px para fora */
+  border-radius: 13px; 
+  padding: 1px; /* Espessura visual da borda */
+  background: linear-gradient(to right, var(--grad-start), var(--grad-mid)); 
+  
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* KPI GRID - Ajuste de Largura e Centralização */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas */
+  gap: 20px;
+  
+  /* LARGURA REDUZIDA E CENTRALIZAÇÃO */
+  width: 100%;             /* Ocupa o espaço disponível... */
+  max-width: 780px;        /* ...mas trava em no máximo 780px (aprox. 60% da tela) */
+  margin: -60px auto 80px auto; /* -60px topo (overlap), auto (centro), 80px base */
+  
+  position: relative;
+  z-index: 20;
+}
+
+/* Ajuste opcional para garantir que o texto dentro do card quebre bonito */
+.kpi-title {
+  font-size: 15px; 
+  color: #FFF; 
+  margin-bottom: 8px; 
+  font-weight: 500;
+  line-height: 1.3; /* Melhora a leitura quando o texto quebra em 2 linhas */
+}
+
+.kpi-card {
+  padding: 25px;
+  background: rgba(20, 20, 20, 0.98); /* Fundo card sólido */
+}
+
+.kpi-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.kpi-number.yellow { color: #FDC806; }
+.kpi-number.green { color: #009039; }
+
+.kpi-title { font-size: 15px; color: #FFF; margin-bottom: 8px; font-weight: 500; }
+.kpi-source { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* SEÇÕES GERAIS */
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  
+  /* MARGEM SUPERIOR: 100px (Mantém afastado do bloco de cima) */
+  /* MARGEM INFERIOR: 40px (Bem próximo dos painéis abaixo) */
+  margin: 100px 0 40px 0; 
+}
+
+/* --- PAINÉIS INTERATIVOS (Slider Horizontal) --- */
+.paineis-grid {
+  display: flex;           /* Muda de Grid para Flex (Fila) */
+  gap: 30px;               /* Espaço entre os cards */
+  overflow-x: auto;        /* Permite rolagem lateral */
+  scroll-behavior: smooth; /* Rolagem suave nativa */
+  padding: 10px 10px 50px 10px; /* Padding extra embaixo para o botão flutuante não cortar */
+  
+  /* Esconde a barra de rolagem (Scrollbar) para ficar limpo */
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+/* Esconde scrollbar no Chrome/Safari */
+.paineis-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- CARD DO PAINEL --- */
+.painel-card {
+  padding: 20px;
+  height: 450px; 
+  
+  /* IMPORTANTE: Tamanho Fixo para o Slider */
+  min-width: 320px; /* Garante que o card não esmague */
+  flex: 0 0 auto;   /* Impede que o card estique ou encolha */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; 
+  overflow: visible; 
+}
+
+
+.painel-title { font-size: 20px; font-weight: 600; margin-bottom: 15px; }
+
+/* --- CONTAINER DO SLIDER (Painéis Interativos) --- */
+.slider-container {
+  position: relative;
+  width: 100%;
+  /* Adiciona espaço nas laterais para as setas não ficarem em cima dos cards */
+  padding: 0 60px; 
+}
+
+/* --- BOTÕES DE SETA (Esquerda/Direita) --- */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  background-color: transparent;
+  border: 2px solid #009039; /* Borda Verde SJM */
+  color: #009039;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.slider-arrow:hover {
+  background-color: #009039;
+  color: #FFFFFF; /* Fica branco ao passar o mouse */
+  box-shadow: 0 0 15px rgba(0, 144, 57, 0.6); /* Brilho verde */
+}
+
+/* Posicionamento Específico */
+.slider-arrow.left { left: 0; }
+.slider-arrow.right { right: 0; }
+
+/* Ícone SVG dentro da seta */
+.slider-arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 3;
+}
+
+/* --- BOTÃO SOBREPONDO A BORDA --- */
+.btn-painel {
+  background-color: #00C748;
+  color: white;
+  text-align: center;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  
+  /* Posicionamento Fixo */
+  position: absolute;
+  bottom: -20px; 
+  left: 50%;
+  
+  /* Centraliza no eixo X e NÃO se mexe mais */
+  transform: translateX(-50%); 
+  
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  white-space: nowrap;
+  
+  /* Apenas transição de cor, sem movimento */
+  transition: background-color 0.3s;
+}
+
+.btn-painel:hover {
+  /* Removemos o 'scale' e mantemos apenas a centralização */
+  transform: translateX(-50%); 
+  background-color: #00e050; /* Apenas muda a cor */
+}
+
+/* ANÁLISE DE DADOS */
+.analise-list {
+  display: flex;
+  flex-direction: column; /* Mantém um embaixo do outro */
+  
+  /* AQUI VOCÊ CONTROLA A SEPARAÇÃO */
+  gap: 30px; /* Aumente este número para separar mais */
+  
+  width: 100%;
+}
+
+.analise-card {
+  /* Propriedades Visuais */
+  background: rgba(255, 255, 255, 0.03); /* Fundo sutil */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda fina */
+  border-radius: 12px;
+  padding: 40px; 
+  
+  /* Layout Interno (Texto na esquerda, Gráfico na direita) */
+  display: flex;
+  align-items: center;
+  gap: 50px; 
+  
+  /* 👇 AQUI ESTÁ A CORREÇÃO DO ESPAÇAMENTO 👇 */
+  margin-bottom: 40px; /* Empurra o cartão de baixo */
+}
+
+/* Opcional: Remove a margem do último cartão para não ficar espaço sobrando antes do botão */
+.analise-card:last-of-type {
+  margin-bottom: 0;
+}
+
+.analise-card:last-child {
+  margin-bottom: 0;
+}
+
+.analise-content { width: 40%; }
+.analise-chart { width: 60%; }
+
+.tag-segmentacao {
+  background-color: #333;
+  color: #FFF;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+}
+
+.analise-content h3 { font-size: 22px; margin-bottom: 5px; color: #FFF; }
+.analise-content h4 { font-size: 14px; color: #888; margin-bottom: 20px; font-weight: 400; }
+.analise-content p { font-size: 14px; color: #BBB; margin-bottom: 15px; line-height: 1.6; }
+
+/* =======================================================================
+   LOADER TECNOLÓGICO (ANÁLISE DE DADOS)
+   ======================================================================= */
+
+/* O Container do Loader (Centralizado dentro do card) */
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 20, 0.95); /* Fundo escuro para destacar o neon */
+  z-index: 10;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-out;
+}
+
+/* O Anel Giratório (Estilo Tech) */
+.tech-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #009039; /* Verde SJM */
+  animation: spin 1.5s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 144, 57, 0.4); /* Brilho Neon */
+}
+
+.tech-loader::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FDC806; /* Amarelo (Detalhe) */
+  animation: spin 2.5s linear infinite reverse; /* Gira ao contrário */
+}
+
+.tech-loader::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #009039; /* Verde */
+  animation: spin 1s linear infinite;
+}
+
+/* Animação de Rotação */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- ESTADOS DE CARREGAMENTO --- */
+
+/* Enquanto carrega: Esconde o conteúdo real */
+.analise-card.is-loading .analise-content,
+.analise-card.is-loading .analise-chart {
+  opacity: 0;
+}
+
+/* Quando termina: Mostra o conteúdo suavemente */
+.analise-card.is-loaded .analise-content,
+.analise-card.is-loaded .analise-chart {
+  opacity: 1;
+  transition: opacity 0.8s ease-in;
+  animation: fadeUpContent 0.8s ease-out;
+}
+
+/* Animação sutil de entrada do conteúdo */
+@keyframes fadeUpContent {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* BOTÃO FINAL */
+.btn-large-container { text-align: center; margin: 80px 0 100px 0; }
+.btn-large {
+  background-color: #009039;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 50px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-large:hover { background-color: #007a30; }
+
+/* FOOTER */
+footer {
+  background-color: white;
+  color: #111;
+  padding: 80px 0;
+  border-top: 4px solid var(--grad-start);
+}
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.footer-col h3 { font-size: 16px; font-weight: 700; margin-bottom: 25px; color: #000; text-transform: uppercase; }
+.footer-col ul li { margin-bottom: 12px; list-style: none; }
+.footer-col a { color: #555; font-size: 14px; font-weight: 500; }
+.footer-col a:hover { color: #009039; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 36px; }
+  .kpi-grid { grid-template-columns: 1fr; margin-top: 0; }
+  .paineis-grid { grid-template-columns: 1fr; }
+  .analise-card { flex-direction: column; }
+  .analise-content, .analise-chart { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .nav-menu { display: none; }
+}
+
+/* =======================================================================
+   ANIMAÇÕES E INTERATIVIDADE (JS)
+   ======================================================================= */
+
+/* Estado inicial (Invisível e deslocado para baixo) */
+.js-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final (Visível e na posição original) */
+.js-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeito Hover nos Gráficos (Interação sutil) */
+.analise-card:hover {
+  border-color: #009039; /* Borda fica verde levemente */
+  transform: translateX(5px); /* Move um pouquinho para a direita */
+  transition: all 0.3s ease;
+}

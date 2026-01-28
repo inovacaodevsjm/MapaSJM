@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>SETRAB</name>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>PIC Vilar dos Teles</name>
+      <description><![CDATA[descrição: Rua César Lemos, 22 (localizado no shopping do jeans)<br>Bairro: Vilar dos Teles<br>GPS: -22.77688595544507, -43.35991843935298]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Rua César Lemos, 22 (localizado no shopping do jeans)</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77688595544507, -43.35991843935298</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3598708,-22.7769158,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>PIC Centro (Poupatempo)</name>
+      <description><![CDATA[descrição: Rua Maria Soares Sendas, 111<br>Bairro: Centro<br>GPS: -22.79626857616254, -43.352654228097165]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Rua Maria Soares Sendas, 111</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.79626857616254, -43.352654228097165</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3527918,-22.7962845,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SINE</name>
+      <description><![CDATA[descrição: R. Aldenor Ribeiro de Matos, 175 (SHOPPING DO JEANS)<br>Bairro: Vilar dos Teles<br>GPS: -22.776863222219447, -43.359394975508906]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>R. Aldenor Ribeiro de Matos, 175 (SHOPPING DO JEANS)</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.776863222219447, -43.359394975508906</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3593948,-22.7768823,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

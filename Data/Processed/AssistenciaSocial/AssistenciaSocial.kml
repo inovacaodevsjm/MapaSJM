@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Assistência Social</name>
+    <Style id="icon-1646-000000-normal">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1646-000000-highlight">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1646-000000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1646-000000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1646-000000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1646-757575-normal">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1646-757575-highlight">
+      <IconStyle>
+        <color>ff757575</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1646-757575">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1646-757575-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1646-757575-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1646-BDBDBD-normal">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1646-BDBDBD-highlight">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1646-BDBDBD">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1646-BDBDBD-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1646-BDBDBD-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>CRAS VILA SÃO JOSÉ</name>
+      <description><![CDATA[descrição: Nome: CRAS VILA SÃO JOSÉ<br>Endereço: Avenida Comendador Teles - 3199<br>Bairro: Vila São José<br>GPS: -22.77312037342964, -43.37439465767093<br>Endereço: Avenida Comendador Teles - 3199<br>Bairro: Vila São José<br>GPS: -22.77312037342964, -43.37439465767093]]></description>
+      <styleUrl>#icon-1646-757575</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CRAS VILA SÃO JOSÉ
+Endereço: Avenida Comendador Teles - 3199
+Bairro: Vila São José
+GPS: -22.77312037342964, -43.37439465767093</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Comendador Teles - 3199</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São José</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.77312037342964, -43.37439465767093</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.374395,-22.77312,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRAS ÍRIS</name>
+      <description><![CDATA[descrição: Nome: CRAS ÍRIS<br>Endereço: Rua Copacabana - 50<br>Bairro: Jardim Íris<br>GPS: -22.779102978715787, -43.35116604572474<br>Endereço: Rua Copacabana - 50<br>Bairro: Jardim Íris<br>GPS: -22.779102978715787, -43.35116604572474]]></description>
+      <styleUrl>#icon-1646-757575</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CRAS ÍRIS
+Endereço: Rua Copacabana - 50
+Bairro: Jardim Íris
+GPS: -22.779102978715787, -43.35116604572474</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Copacabana - 50</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Íris</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.779102978715787, -43.35116604572474</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.351166,-22.779103,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRAS ÉDEN</name>
+      <description><![CDATA[descrição: Nome: CRAS ÉDEN<br>Endereço: Avenida Tenente Aviador Nilton Campos Soares - 2472<br>Bairro: Éden<br>GPS: -22.793739678110207, -43.395172761066185<br>Endereço: Avenida Tenente Aviador Nilton Campos Soares - 2472<br>Bairro: Éden<br>GPS: -22.793739678110207, -43.395172761066185]]></description>
+      <styleUrl>#icon-1646-757575</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CRAS ÉDEN
+Endereço: Avenida Tenente Aviador Nilton Campos Soares - 2472
+Bairro: Éden
+GPS: -22.793739678110207, -43.395172761066185</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Tenente Aviador Nilton Campos Soares - 2472</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Éden</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.793739678110207, -43.395172761066185</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.395173,-22.79374,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRAS CENTRO</name>
+      <description><![CDATA[descrição: Nome: CRAS CENTRO<br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br>GPS: -22.8016192195301, -43.361681916888706<br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br>GPS: -22.8016192195301, -43.361681916888706]]></description>
+      <styleUrl>#icon-1646-757575</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CRAS CENTRO
+Endereço: Rua São João Batista - 742
+Bairro: Centro
+GPS: -22.8016192195301, -43.361681916888706</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua São João Batista - 742</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.8016192195301, -43.361681916888706</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.361682,-22.801619,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CRAS Parque José Bonifácio</name>
+      <description><![CDATA[descrição: Nome: CRAS Parque José Bonifácio<br>Endereço: Rua Visconde de Barbacena - s/n<br>Bairro: Jardim José Bonifácio<br>GPS: -22.787669723512185, -43.36178762894914<br>Endereço: Rua Visconde de Barbacena - s/n<br>Bairro: Jardim José Bonifácio<br>GPS: -22.787669723512185, -43.36178762894914]]></description>
+      <styleUrl>#icon-1646-757575</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CRAS Parque José Bonifácio
+Endereço: Rua Visconde de Barbacena - s/n
+Bairro: Jardim José Bonifácio
+GPS: -22.787669723512185, -43.36178762894914</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Visconde de Barbacena - s/n</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim José Bonifácio</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.787669723512185, -43.36178762894914</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.361788,-22.78767,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CREAS VILA SÃO JOSÉ</name>
+      <description><![CDATA[descrição: Nome: CREAS VILA SÃO JOSÉ<br>Endereço: Avenida Comendador Teles - 3199<br>Bairro: Vila São José<br>GPS: -22.773130265897112, -43.37439465767093<br>Endereço: Avenida Comendador Teles - 3199<br>Bairro: Vila São José<br>GPS: -22.773130265897112, -43.37439465767093]]></description>
+      <styleUrl>#icon-1646-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CREAS VILA SÃO JOSÉ
+Endereço: Avenida Comendador Teles - 3199
+Bairro: Vila São José
+GPS: -22.773130265897112, -43.37439465767093</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Comendador Teles - 3199</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vila São José</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.773130265897112, -43.37439465767093</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.374395,-22.77313,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CREAS CENTRO</name>
+      <description><![CDATA[descrição: Nome: CREAS CENTRO<br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br>GPS: -22.8016192195301, -43.361681916888706<br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br>GPS: -22.8016192195301, -43.361681916888706]]></description>
+      <styleUrl>#icon-1646-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CREAS CENTRO
+Endereço: Rua São João Batista - 742
+Bairro: Centro
+GPS: -22.8016192195301, -43.361681916888706</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua São João Batista - 742</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.8016192195301, -43.361681916888706</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.361682,-22.801619,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CENTRO POP</name>
+      <description><![CDATA[descrição: Nome: CENTRO POP<br>Endereço: Rua Doutor Celso José de Carvalho - 915<br>Bairro: Jardim Meriti<br>GPS: -22.7845397, -43.3642721<br>Endereço: Rua Doutor Celso José de Carvalho - 915<br>Bairro: Jardim Meriti<br>GPS: -22.7845397, -43.3642721]]></description>
+      <styleUrl>#icon-1646-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CENTRO POP
+Endereço: Rua Doutor Celso José de Carvalho - 915
+Bairro: Jardim Meriti
+GPS: -22.7845397, -43.3642721</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Doutor Celso José de Carvalho - 915</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.7845397, -43.3642721</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.364272,-22.78454,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CENTRAL DO CADASTRO UNICO E BOLSA FAMILIA</name>
+      <description><![CDATA[descrição: Nome: Central do Cadastro Único e Bolsa Família<br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br>GPS: -22.8016192195301, -43.361681916888706<br><br>Endereço: Rua São João Batista - 742<br>Bairro: Centro<br><br>GPS: -22.8016192195301, -43.361681916888706]]></description>
+      <styleUrl>#icon-1646-000000</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: Central do Cadastro Único e Bolsa Família
+Endereço: Rua São João Batista - 742
+Bairro: Centro
+GPS: -22.8016192195301, -43.361681916888706
+</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua São João Batista - 742</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro
+</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.8016192195301, -43.361681916888706</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.361682,-22.801619,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Casa de Passagem Sebastião Pacheco Gonçalves</name>
+      <description><![CDATA[descrição: Nome: Casa de Passagem Sebastião Pacheco Gonçalves<br>Endereço: Avenida Nossa Senhora das Graças - 126<br>Bairro: Centro<br>GPS:  -22.804115574063818, -43.368102683110635<br>Endereço: Avenida Nossa Senhora das Graças - 126<br>Bairro: Centro<br>GPS: -22.804115574063818, -43.368102683110635]]></description>
+      <styleUrl>#icon-1646-000000</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: Casa de Passagem Sebastião Pacheco Gonçalves
+Endereço: Avenida Nossa Senhora das Graças - 126
+Bairro: Centro
+GPS:  -22.804115574063818, -43.368102683110635</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Avenida Nossa Senhora das Graças - 126</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Centro</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.804115574063818, -43.368102683110635</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3681081,-22.8041136,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CENTRO DE ATENDIMENTO A MULHER</name>
+      <description><![CDATA[descrição: Nome: CENTRO DE ATENDIMENTO A MULHER<br>Endereço: Rua Defensor Público Zilmar Pinaud - Lote 14 Quadra 48<br>Bairro: Jardim Meriti<br>GPS:-22.777686571742823, -43.36908998249317<br>Endereço: Rua Defensor Público Zilmar Pinaud - Lote 14 Quadra 48<br>Bairro: Jardim Meriti<br>GPS: -22.777686571742823, -43.36908998249317]]></description>
+      <styleUrl>#icon-1646-000000</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CENTRO DE ATENDIMENTO A MULHER
+Endereço: Rua Defensor Público Zilmar Pinaud - Lote 14 Quadra 48
+Bairro: Jardim Meriti
+GPS:-22.777686571742823, -43.36908998249317</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Defensor Público Zilmar Pinaud - Lote 14 Quadra 48</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Jardim Meriti</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.777686571742823, -43.36908998249317</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3690629,-22.777719,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>CONSELHO TUTELAR I</name>
+      <description><![CDATA[descrição: Nome: CONSELHO TUTELAR I<br>Endereço: Rua Aldenor Ribeiro de Matos - 175<br>Bairro: Vilar dos Teles<br>GPS: -22.776893651984196, -43.35942933852543<br>Endereço: Rua Aldenor Ribeiro de Matos - 175<br>Bairro: Vilar dos Teles<br>GPS: -22.776893651984196, -43.35942933852543]]></description>
+      <styleUrl>#icon-1646-000000</styleUrl>
+      <ExtendedData>
+        <Data name="descrição">
+          <value>Nome: CONSELHO TUTELAR I
+Endereço: Rua Aldenor Ribeiro de Matos - 175
+Bairro: Vilar dos Teles
+GPS: -22.776893651984196, -43.35942933852543</value>
+        </Data>
+        <Data name="Endereço">
+          <value>Rua Aldenor Ribeiro de Matos - 175</value>
+        </Data>
+        <Data name="Bairro">
+          <value>Vilar dos Teles</value>
+        </Data>
+        <Data name="GPS">
+          <value>-22.776893651984196, -43.35942933852543</value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.3594242,-22.776899,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
